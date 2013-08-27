@@ -33,15 +33,6 @@ class SupplierNode extends AbstractNode
     protected $id;
 
     /**
-     * @param string $id
-     * @return void
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("SUPPLIER_NAME")
@@ -51,11 +42,39 @@ class SupplierNode extends AbstractNode
     protected $name;
 
     /**
+     *
+     * @param string $id
+     * @return void
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * @param string $name
      * @return void
      */
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }

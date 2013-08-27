@@ -75,7 +75,9 @@ class DataLoader
             switch(strtolower($key)) {
 
                 case 'header':
-                    self::loadHeader($value, $document->getHeader());
+                    if($document->getHeader() !== null) {
+                        self::loadHeader($value, $document->getHeader());
+                    }
                     break;
 
                 case 'attributes':
@@ -103,11 +105,15 @@ class DataLoader
                     break;
 
                 case 'catalog':
-                    self::loadArrayData($value, $header->getCatalog());
+                    if($header->getCatalog() !== null) {
+                        self::loadArrayData($value, $header->getCatalog());
+                    }
                     break;
 
                 case 'supplier':
-                    self::loadArrayData($value, $header->getSupplier());
+                    if($header->getSupplier() !== null) {
+                        self::loadArrayData($value, $header->getSupplier());
+                    }
                     break;
 
                 default:
@@ -142,7 +148,7 @@ class DataLoader
      * @param string $attribute
      * @return string
      */
-    protected static function formatAttribute($attribute)
+    public static function formatAttribute($attribute)
     {
         return \preg_replace_callback(
             '/(^|_|\.)+(.)/', function ($match) {

@@ -23,6 +23,25 @@ use \SE\Component\BMEcat\Node\AbstractNode;
  */
 class CatalogNode extends AbstractNode
 {
+
+    /**
+      * @Serializer\Expose
+      * @Serializer\Type("string")
+      * @Serializer\SerializedName("CATALOG_ID")
+      *
+      * @var string
+      */
+    protected $id;
+
+    /**
+      * @Serializer\Expose
+      * @Serializer\Type("string")
+      * @Serializer\SerializedName("CATALOG_VERSION")
+      *
+      * @var string
+      */
+    protected $version;
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
@@ -42,15 +61,6 @@ class CatalogNode extends AbstractNode
     }
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("CATALOG_ID")
-     *
-     * @var string
-     */
-    protected $id;
-
-    /**
      * @param string $id
      * @return void
      */
@@ -58,14 +68,6 @@ class CatalogNode extends AbstractNode
     {
         $this->id = $id;
     }
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("CATALOG_VERSION")
-     *
-     * @var string
-     */
-    protected $version;
 
     /**
      * @param string $version
@@ -75,4 +77,33 @@ class CatalogNode extends AbstractNode
     {
         $this->version = $version;
     }
+
+    /**
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+
 }

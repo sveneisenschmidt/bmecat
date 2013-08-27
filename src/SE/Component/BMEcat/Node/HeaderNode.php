@@ -44,6 +44,15 @@ class HeaderNode extends AbstractNode
     }
 
     /**
+     *
+     * @return string
+     */
+    public function getGeneratorInfo()
+    {
+        return $this->generatorInfo;
+    }
+
+    /**
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\CatalogNode")
      * @Serializer\SerializedName("CATALOG")

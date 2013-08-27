@@ -51,11 +51,15 @@ class DocumentBuilder
     public function __construct(Serializer $serializer = null, NodeLoader $loader = null)
     {
         if($serializer === null) {
-            $this->serializer = SerializerBuilder::create()->build();
+            $serializer = SerializerBuilder::create()->build();
         }
+
         if($loader === null) {
-            $this->loader = new NodeLoader();
+            $loader = new NodeLoader();
         }
+
+        $this->serializer = $serializer;
+        $this->loader     = $loader;
     }
 
     /**
