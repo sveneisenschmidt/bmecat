@@ -76,6 +76,16 @@ class NodeLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Default_Mapping_Returns_Default_Class()
+    {
+        $instance = $this->loader->getInstance(\SE\Component\BMEcat\NodeLoader::ARTICLE_NODE);
+        $this->assertInstanceOf('\SE\Component\BMEcat\Node\ArticleNode', $instance);
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Custom_Mapping_Returns_Custom_Class()
     {
        $class = '\SE\Component\BMEcat\Tests\Fixtures\CustomArticleNodeFixture';
@@ -86,5 +96,37 @@ class NodeLoaderTest extends \PHPUnit_Framework_TestCase
        $this->assertInstanceOf($class, $instance);
        $this->assertInstanceOf('\SE\Component\BMEcat\Node\ArticleNode', $instance);
     }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownNodeTypeException
+     */
+    public function Get_Unknown_Node_Class()
+    {
+        $this->loader->get('unknown.node');
+
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownNodeTypeException
+     */
+    public function Set_Unknown_Node_Class()
+    {
+        $this->loader->set('unknown.node', '\SE\Component\BMEcat\Node\ArticleNode');
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownNodeException
+     */
+    public function Get_Unknown_Node_Instance()
+    {
+        $this->loader->getInstance('unknown.node');
+    }
+
 
 }
