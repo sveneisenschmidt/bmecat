@@ -1,0 +1,23 @@
+{
+    "name": "se/bmecat",
+    "type": "library",
+    "description": "Allows to build BMECat documents from PHP and converts them to xml",
+    "keywords": ["bmecat", "document", "serialization", "xml"],
+    "homepage": "https://github.com/sveneisenschmidt/bmecat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sven Eisenschmidt",
+            "email": "sven.eisenschmidt@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "jms/serializer": "0.11.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "SE\\Component\\BMEcat": "src/"
+        }
+    }
+}
