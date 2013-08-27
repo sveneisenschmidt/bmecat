@@ -1,7 +1,7 @@
 {
     "name": "se/bmecat",
     "type": "library",
-    "description": "Allows to build BMECat documents from PHP and converts them to xml",
+    "description": "Allows to build BMEcat documents from PHP and converts them to xml",
     "keywords": ["bmecat", "document", "serialization", "xml"],
     "homepage": "https://github.com/sveneisenschmidt/bmecat",
     "license": "MIT",
@@ -15,8 +15,12 @@
         "php": ">=5.4.0",
         "jms/serializer": "0.11.*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
     "autoload": {
         "psr-0": {
+            "SE\\Component\\BMEcat\\Tests": "tests/",
             "SE\\Component\\BMEcat": "src/"
         }
     }

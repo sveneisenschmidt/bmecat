@@ -85,4 +85,23 @@ class NodeLoader
 
         $this->custom[$nodeName] = $class;
     }
+
+    /**
+     *
+     * @param string $nodeName
+     * @throws \SE\Component\BMEcat\Exception\UnknownNodeTypeException
+     * @return $class
+     */
+    public function get($nodeName)
+    {
+        if(isset($this->custom[$nodeName]) === true) {
+            return $this->custom[$nodeName];
+        }
+
+        if(isset($this->default[$nodeName]) === true) {
+            return $this->default[$nodeName];
+        }
+
+        throw new UnknownNodeTypeException(sprintf('Node name %s not found.', $nodeName));
+    }
 }
