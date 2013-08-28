@@ -8,6 +8,7 @@
  * file that was distributed with this source code.
  */
 
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
 call_user_func(function() {
     if ( ! is_file($autoloadFile = __DIR__.'/../vendor/autoload.php')) {
@@ -15,4 +16,5 @@ call_user_func(function() {
     }
 
     $loader = require $autoloadFile;
+    AnnotationRegistry::registerLoader('class_exists');
 });

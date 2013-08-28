@@ -40,7 +40,6 @@ class DocumentBuilderTest extends \PHPUnit_Framework_TestCase
     public function Sets_Up_Default_Dependencies()
     {
         $builder = new \SE\Component\BMEcat\DocumentBuilder();
-
         $this->assertInstanceOf('\JMS\Serializer\Serializer', $builder->getSerializer());
         $this->assertInstanceOf('\SE\Component\BMEcat\NodeLoader', $builder->getLoader());
     }
@@ -52,8 +51,47 @@ class DocumentBuilderTest extends \PHPUnit_Framework_TestCase
     public function Instantiate_Via_Static_Method()
     {
         $builder = \SE\Component\BMEcat\DocumentBuilder::create($this->serializer, $this->loader);
-
         $this->assertInstanceOf('\JMS\Serializer\Serializer', $builder->getSerializer());
         $this->assertInstanceOf('\SE\Component\BMEcat\NodeLoader', $builder->getLoader());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function To_String_Returns_Default_Document_Without_Null_Values()
+    {
+        $builder = new \SE\Component\BMEcat\DocumentBuilder;
+        $builder->build();
+        $builder->setSerializeNull(false);
+
+        $expected = file_get_contents(__DIR__.'/Fixtures/empty_document_without_null_values.xml');
+        $this->assertEquals($expected, $builder->toString());
+
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function To_String_Returns_Default_Document_With_Null_Values()
+    {
+        $builder = new \SE\Component\BMEcat\DocumentBuilder;
+        $builder->build();
+        $builder->setSerializeNull(true);
+
+        $expected = file_get_contents(__DIR__.'/Fixtures/empty_document_with_null_values.xml');
+        $this->assertEquals($expected, $builder->toString());
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\MissingDocumentException
+     */
+    public function To_String_Throws_Exception()
+    {
+        $builder = new \SE\Component\BMEcat\DocumentBuilder;
+        $builder->toString();
     }
 }

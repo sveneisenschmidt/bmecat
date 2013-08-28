@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
+  <HEADER>
+    <GENERATOR_INFO xsi:nil="true"/>
+    <CATALOG>
+      <CATALOG_ID xsi:nil="true"/>
+      <CATALOG_VERSION xsi:nil="true"/>
+      <LANGUAGE xsi:nil="true"/>
+    </CATALOG>
+    <SUPPLIER>
+      <SUPPLIER_ID xsi:nil="true"/>
+      <SUPPLIER_NAME xsi:nil="true"/>
+    </SUPPLIER>
+  </HEADER>
+  <T_NEW_CATALOG xsi:nil="true"/>
+</BMEcat>
