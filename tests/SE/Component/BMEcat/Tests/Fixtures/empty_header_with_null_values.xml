@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SUPPLIER>
-  <SUPPLIER_ID xsi:nil="true"/>
-  <SUPPLIER_NAME xsi:nil="true"/>
-</SUPPLIER>
+<HEADER>
+  <GENERATOR_INFO xsi:nil="true"/>
+  <CATALOG xsi:nil="true"/>
+  <SUPPLIER xsi:nil="true"/>
+</HEADER>
