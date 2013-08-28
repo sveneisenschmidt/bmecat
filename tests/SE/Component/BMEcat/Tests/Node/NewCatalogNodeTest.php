@@ -17,6 +17,11 @@ namespace SE\Component\BMEcat\Tests\Node;
  */
 class NewCatalogNodeTest  extends \PHPUnit_Framework_TestCase
 {
+    public function setUp()
+    {
+        $this->serializer = \JMS\Serializer\SerializerBuilder::create()->build();
+    }
+
     /**
      *
      * @test
@@ -47,7 +52,13 @@ class NewCatalogNodeTest  extends \PHPUnit_Framework_TestCase
      */
     public function Serialize_With_Null_Values()
     {
-        $this->markTestIncomplete();
+        $node = new \SE\Component\BMEcat\Node\NewCatalogNode();
+        $this->serializer->setSerializeNull(true);
+
+        $expected = file_get_contents(__DIR__.'/../Fixtures/empty_new_catalog_with_null_values.xml');
+        $actual = $this->serializer->serialize($node, 'xml');
+
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -56,6 +67,12 @@ class NewCatalogNodeTest  extends \PHPUnit_Framework_TestCase
      */
     public function Serialize_Without_Null_Values()
     {
-        $this->markTestIncomplete();
+        $node = new \SE\Component\BMEcat\Node\NewCatalogNode();
+        $this->serializer->setSerializeNull(false);
+
+        $expected = file_get_contents(__DIR__.'/../Fixtures/empty_new_catalog_without_null_values.xml');
+        $actual = $this->serializer->serialize($node, 'xml');
+
+        $this->assertEquals($expected, $actual);
     }
 } 
