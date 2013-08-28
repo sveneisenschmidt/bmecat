@@ -79,6 +79,15 @@ class ArticleNode extends AbstractNode
 
     /**
      *
+     * @return \SE\Component\BMEcat\Node\ArticleDetailsNode
+     */
+    public function getDetails()
+    {
+        return $this->detail;
+    }
+
+    /**
+     *
      * @param \SE\Component\BMEcat\Node\ArticleFeatureNode $feature
      */
     public function addFeature(ArticleFeatureNode $feature)
@@ -141,5 +150,31 @@ class ArticleNode extends AbstractNode
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     *
+     * @return \SE\Component\BMEcat\Node\ArticleFeatureNode[]
+     */
+    public function getFeatures()
+    {
+        if($this->features === null)  {
+            return [];
+        }
+
+        return $this->features;
+    }
+
+    /**
+     *
+     * @return \SE\Component\BMEcat\Node\ArticlePricingNode[]
+     */
+    public function getPrices()
+    {
+        if($this->prices === null)  {
+            return [];
+        }
+
+        return $this->prices;
     }
 }

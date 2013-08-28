@@ -57,4 +57,23 @@ class DocumentNodeTest extends \PHPUnit_Framework_TestCase
         $document->setHeader($header);
         $this->assertSame($header, $document->getHeader());
     }
+
+    /**
+     *
+     * @test
+     */
+    public function Serialize_With_Null_Values()
+    {
+        $this->markTestIncomplete();
+    }
+
+
+    /**
+     *
+     * @test
+     */
+    public function Serialize_Without_Null_Values()
+    {
+        $this->markTestIncomplete();
+    }
 }

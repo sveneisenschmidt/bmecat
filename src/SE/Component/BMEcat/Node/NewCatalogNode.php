@@ -51,4 +51,19 @@ class NewCatalogNode extends AbstractNode
             $this->articles = null;
         }
     }
+
+    /**
+     *
+     * @return \SE\Component\BMEcat\Node\ArticleNode[]
+     */
+    public function getArticles()
+    {
+        if($this->articles === null)  {
+            return [];
+        }
+
+        return $this->articles;
+    }
+
+
 }
