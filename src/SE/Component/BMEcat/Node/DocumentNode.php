@@ -29,7 +29,7 @@ class DocumentNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\XmlAttribute
      */
-    protected $version = '1.0';
+    protected $version = '1.2';
 
     /**
      * @Serializer\Expose

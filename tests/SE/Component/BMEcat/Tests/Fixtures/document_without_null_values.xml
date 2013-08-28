@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
+<BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
   <HEADER>
     <GENERATOR_INFO><![CDATA[DocumentTest Document]]></GENERATOR_INFO>
     <CATALOG>
       <CATALOG_ID><![CDATA[MY_CATALOG]]></CATALOG_ID>
       <CATALOG_VERSION><![CDATA[0.99]]></CATALOG_VERSION>
       <LANGUAGE><![CDATA[EN]]></LANGUAGE>
+      <DATETIME type="generation_date">
+        <DATE><![CDATA[1979-01-01]]></DATE>
+        <TIME><![CDATA[10:59:54]]></TIME>
+        <TIMEZONE><![CDATA[-01:00]]></TIMEZONE>
+      </DATETIME>
     </CATALOG>
     <SUPPLIER>
       <SUPPLIER_ID><![CDATA[BMECAT_TEST]]></SUPPLIER_ID>

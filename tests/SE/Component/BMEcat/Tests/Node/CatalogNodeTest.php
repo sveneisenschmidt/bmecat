@@ -68,6 +68,20 @@ class CatalogNodeTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Set_Get_Date_Time()
+    {
+        $node = new \SE\Component\BMEcat\Node\CatalogNode();
+        $dateTime = new \SE\Component\BMEcat\Node\DateTimeNode();
+
+        $this->assertNull($node->getDateTime());
+        $node->setDateTime($dateTime);
+        $this->assertEquals($dateTime, $node->getDateTime());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\CatalogNode();

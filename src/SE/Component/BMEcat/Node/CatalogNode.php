@@ -13,6 +13,7 @@ namespace SE\Component\BMEcat\Node;
 use \JMS\Serializer\Annotation as Serializer;
 
 use \SE\Component\BMEcat\Node\AbstractNode;
+use \SE\Component\BMEcat\Node\DateTimeNode;
 
 /**
  *
@@ -50,6 +51,15 @@ class CatalogNode extends AbstractNode
      * @var string
      */
     protected $language;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("SE\Component\BMEcat\Node\DateTimeNode")
+     * @Serializer\SerializedName("DATETIME")
+     *
+     * @var string
+     */
+    protected $dateTime;
 
     /**
      * @param string $language
@@ -105,5 +115,22 @@ class CatalogNode extends AbstractNode
         return $this->version;
     }
 
+    /**
+     *
+     * @param \SE\Component\BMEcat\Node\DateTimeNode $dateTime
+     */
+    public function setDateTime(DateTimeNode $dateTime)
+    {
+        $this->dateTime = $dateTime;
+    }
+
+    /**
+     *
+     * @return \SE\Component\BMEcat\Node\DateTimeNode
+     */
+    public function getDateTime()
+    {
+        return $this->dateTime;
+    }
 
 }

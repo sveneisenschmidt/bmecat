@@ -30,9 +30,9 @@ class DocumentNodeTest extends \PHPUnit_Framework_TestCase
     {
         $document = new \SE\Component\BMEcat\Node\DocumentNode();
 
-        $this->assertEquals('1.0', $document->getVersion());
-        $document->setVersion('1.1');
-        $this->assertEquals('1.1', $document->getVersion());
+        $this->assertEquals('1.2', $document->getVersion());
+        $document->setVersion('1.9');
+        $this->assertEquals('1.9', $document->getVersion());
     }
 
     /**

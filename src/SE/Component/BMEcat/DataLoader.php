@@ -14,6 +14,8 @@ use \SE\Component\BMEcat\DocumentBuilder;
 use \SE\Component\BMEcat\Node\AbstractNode;
 use \SE\Component\BMEcat\Node\DocumentNode;
 use \SE\Component\BMEcat\Node\HeaderNode;
+use \SE\Component\BMEcat\Node\CatalogNode;
+use \SE\Component\BMEcat\Node\DateTimeNode;
 use \SE\Component\BMEcat\Exception\UnknownKeyException;
 
 /**
@@ -106,7 +108,7 @@ class DataLoader
 
                 case 'catalog':
                     if($header->getCatalog() !== null) {
-                        self::loadArrayData($value, $header->getCatalog());
+                        self::loadCatalog($value, $header->getCatalog());
                     }
                     break;
 
@@ -114,6 +116,33 @@ class DataLoader
                     if($header->getSupplier() !== null) {
                         self::loadArrayData($value, $header->getSupplier());
                     }
+                    break;
+
+                default:
+                    throw new UnknownKeyException(sprintf('Unknown key header.%s to load', $key));
+            }
+        }
+    }
+
+    /**
+     *
+     * @param array $data
+     * @param \SE\Component\BMEcat\Node\CatalogNode $catalog
+     * @throws \SE\Component\BMEcat\Exception\UnknownKeyException
+     */
+    public static function loadCatalog(array $data, CatalogNode $catalog)
+    {
+        foreach($data as $key => $value) {
+            switch(strtolower($key)) {
+
+                case 'id':
+                case 'version':
+                case 'language':
+                    self::loadScalarData($key, $value, $catalog);
+                    break;
+
+                case 'datetime':
+                    self::loadArrayData($value, $catalog->getDateTime());
                     break;
 
                 default:

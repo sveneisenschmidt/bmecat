@@ -137,6 +137,11 @@ class DocumentBuilder
             $header->setCatalog($catalog);
         }
 
+        if(($datetime = $catalog->getDateTime()) === null) {
+            $datetime = $this->loader->getInstance(NodeLoader::DATE_TIME_NODE);
+            $catalog->setDateTime($datetime);
+        }
+
         if(($newCatalog = $document->getNewCatalog()) === null) {
             $newCatalog = $this->loader->getInstance(NodeLoader::NEW_CATALOG_NODE);
             $document->setNewCatalog($newCatalog);

@@ -28,6 +28,11 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
                         'id'        => 'MY_CATALOG',
                         'version'   => '0.99',
                         'language'  => 'EN',
+                        'datetime'  => [
+                            'date' => '1979-01-01',
+                            'time' => '10:59:54',
+                            'timezone' => '-01:00',
+                        ]
                     ],
                     'supplier' => [
                         'id'    => 'BMECAT_TEST',

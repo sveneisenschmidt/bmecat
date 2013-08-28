@@ -29,6 +29,7 @@ class NodeLoader
     const ARTICLE_FEATURE_NODE  = 'article.feature.node';
     const ARTICLE_DETAILS_NODE  = 'article.details.node';
     const ARTICLE_PRICE_NODE    = 'article.price.node';
+    const DATE_TIME_NODE        = 'datetime.node';
 
     /**
      *
@@ -44,6 +45,7 @@ class NodeLoader
         self::ARTICLE_FEATURE_NODE      => '\SE\Component\BMEcat\Node\ArticleFeatureNode',
         self::ARTICLE_DETAILS_NODE      => '\SE\Component\BMEcat\Node\ArticleDetailsNode',
         self::ARTICLE_PRICE_NODE        => '\SE\Component\BMEcat\Node\ArticlePriceNode',
+        self::DATE_TIME_NODE            => '\SE\Component\BMEcat\Node\DateTimeNode',
     ];
 
     /**
