@@ -183,6 +183,34 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Load_Catalog_Children()
+    {
+        $data = [
+            'datetime' => [
+                'date' => '2001-01-01'
+            ],
+        ];
+
+        $datetime = $this->getMock('\SE\Component\BMEcat\Node\DateTimeNode');
+        $datetime->expects($this->once())
+            ->method('setDate')
+            ->with($data['datetime']['date']);
+        $datetime->expects($this->once())
+            ->method('getDate')
+            ->will($this->returnValue($data['datetime']['date']));
+
+        $catalog = new \SE\Component\BMEcat\Node\CatalogNode;
+        $catalog->setDateTime($datetime);
+
+        \SE\Component\BMEcat\DataLoader::loadCatalog($data, $catalog);
+
+        $this->assertSame($data['datetime']['date'], $datetime->getDate());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Load_Header_Children()
     {
         $data = [
@@ -373,5 +401,20 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
 
         $header = $this->getMock('\SE\Component\BMEcat\Node\HeaderNode');
         \SE\Component\BMEcat\DataLoader::loadHeader($data, $header);
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownKeyException
+     */
+    public function Unknown_Catalog_Key_Exceptions_Get_Thrown()
+    {
+        $data = [
+            sha1(uniqid(microtime(false), true)) => []
+        ];
+
+        $catalog = $this->getMock('\SE\Component\BMEcat\Node\CatalogNode');
+        \SE\Component\BMEcat\DataLoader::loadCatalog($data, $catalog);
     }
 }
