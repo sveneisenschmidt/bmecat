@@ -71,6 +71,24 @@ class DocumentNode extends AbstractNode
     protected $catalog;
 
     /**
+     *
+     * @param string $version
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
      * @param \SE\Component\BMEcat\Node\HeaderNode $header
      * @return void
      */

@@ -29,6 +29,27 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Load_From_Builder()
+    {
+        $info = sha1(uniqid(microtime(false), true));
+        $data = [
+            'document' => [
+                'header' => [
+                    'generator_info' => $info,
+                ]
+            ]
+        ];
+
+        $this->builder->load($data);
+
+        $header = $this->builder->getDocument()->getHeader();
+        $this->assertEquals($info, $header->getGeneratorInfo());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Can_Create_Default_Document()
     {
         \SE\Component\BMEcat\DataLoader::load([], $this->builder);
@@ -140,7 +161,7 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
     public function Load_Header_Attributes()
     {
         $data = [
-            'generator_info' => sha1(uniqid(microtime(false), true))
+            'generator_info' => sha1(uniqid(microtime(false), true)),
         ];
 
         $stub = $this->getMock('\SE\Component\BMEcat\Node\HeaderNode');
@@ -198,8 +219,159 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame($data['catalog']['id'], $catalog->getId());
         $this->assertSame($data['supplier']['name'], $supplier->getName());
+    }
 
+    /**
+     *
+     * @test
+     */
+    public function Load_Empty_Document()
+    {
+        $data = [
+            'document' => []
+        ];
 
+        $builder = $this->getMock('\SE\Component\BMEcat\DocumentBuilder', ['getDocument']);
+        $builder->expects($this->exactly(2))
+            ->method('getDocument');
 
+        \SE\Component\BMEcat\DataLoader::load($data, $builder);
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Load_Document_Children()
+    {
+        $data = [
+            'header' => [
+                'generator_info' => sha1(uniqid(microtime(false), true)),
+            ]
+        ];
+
+        $header   = $this->getMock('\SE\Component\BMEcat\Node\HeaderNode');
+        $document = $this->getMock('\SE\Component\BMEcat\Node\DocumentNode');
+        $document->setHeader($header);
+
+        $header->expects($this->exactly(1))
+            ->method('setGeneratorInfo')
+            ->with($data['header']['generator_info']);
+
+        $document->expects($this->exactly(2))
+            ->method('getHeader')
+            ->will($this->returnValue($header));
+
+        \SE\Component\BMEcat\DataLoader::loadDocument($data, $document);
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Load_Document_Attributes()
+    {
+        $data = [
+            'attributes' => [
+                'version' => sha1(uniqid(microtime(false), true)),
+            ]
+
+        ];
+
+        $document = $this->getMock('\SE\Component\BMEcat\Node\DocumentNode');
+        $document->expects($this->exactly(1))
+            ->method('setVersion')
+            ->with($data['attributes']['version']);
+
+        $document->expects($this->exactly(1))
+            ->method('getVersion')
+            ->will($this->returnValue($data['attributes']['version']));
+
+        \SE\Component\BMEcat\DataLoader::loadDocument($data, $document);
+        $this->assertSame($data['attributes']['version'], $document->getVersion());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Nullable_Is_Handled_Correctly()
+    {
+        $data = [
+            'nullable' => true
+        ];
+
+        $serializer = $this->getMock('\JMS\Serializer\Serializer', [], [], '', false);
+        $serializer->expects($this->exactly(2))
+            ->method('setSerializeNull')
+            ->with($data['nullable']);
+
+        $builder = new \SE\Component\BMEcat\DocumentBuilder($serializer);
+        $builder->setSerializeNull($data['nullable']);
+
+        \SE\Component\BMEcat\DataLoader::load($data, $builder);
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Nullable_Has_Wrong_Value_And_Is_Ignored()
+    {
+        $data = [
+            'nullable' => sha1(uniqid(microtime(false), true)),
+        ];
+
+        $serializer = $this->getMock('\JMS\Serializer\Serializer', [], [], '', false);
+        $serializer->expects($this->exactly(0))
+            ->method('setSerializeNull');
+
+        $builder = new \SE\Component\BMEcat\DocumentBuilder($serializer);
+        \SE\Component\BMEcat\DataLoader::load($data, $builder);
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownKeyException
+     */
+    public function Unknown_Option_Key_Exceptions_Get_Thrown()
+    {
+        $data = [
+            sha1(uniqid(microtime(false), true)) => []
+        ];
+
+        $builder = $this->getMock('\SE\Component\BMEcat\DocumentBuilder', ['getDocument']);
+        \SE\Component\BMEcat\DataLoader::load($data, $builder);
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownKeyException
+     */
+    public function Unknown_Document_Key_Exceptions_Get_Thrown()
+    {
+        $data = [
+            sha1(uniqid(microtime(false), true)) => []
+        ];
+
+        $document = $this->getMock('\SE\Component\BMEcat\Node\DocumentNode');
+        \SE\Component\BMEcat\DataLoader::loadDocument($data, $document);
+    }
+
+    /**
+     *
+     * @test
+     * @expectedException \SE\Component\BMEcat\Exception\UnknownKeyException
+     */
+    public function Unknown_Header_Key_Exceptions_Get_Thrown()
+    {
+        $data = [
+            sha1(uniqid(microtime(false), true)) => []
+        ];
+
+        $header = $this->getMock('\SE\Component\BMEcat\Node\HeaderNode');
+        \SE\Component\BMEcat\DataLoader::loadHeader($data, $header);
     }
 }
