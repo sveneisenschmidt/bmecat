@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
+  <HEADER>
+    <GENERATOR_INFO><![CDATA[DocumentTest Document]]></GENERATOR_INFO>
+    <CATALOG>
+      <CATALOG_ID><![CDATA[MY_CATALOG]]></CATALOG_ID>
+      <CATALOG_VERSION><![CDATA[0.99]]></CATALOG_VERSION>
+      <LANGUAGE><![CDATA[EN]]></LANGUAGE>
+    </CATALOG>
+    <SUPPLIER>
+      <SUPPLIER_ID><![CDATA[BMECAT_TEST]]></SUPPLIER_ID>
+      <SUPPLIER_NAME><![CDATA[TestSupplier]]></SUPPLIER_NAME>
+    </SUPPLIER>
+  </HEADER>
+  <T_NEW_CATALOG>
+    <ARTICLE>
+      <SUPPLIER_AID><![CDATA[1]]></SUPPLIER_AID>
+      <ARTICLE_DETAILS xsi:nil="true"/>
+      <ARTICLE_PRICE_DETAILS>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+      <ARTICLE_FEATURES>
+    <FEATURE>
+      <FNAME><![CDATA[A]]></FNAME>
+      <FVALUE><![CDATA[X]]></FVALUE>
+    </FEATURE>
+    <FEATURE>
+      <FNAME><![CDATA[B]]></FNAME>
+      <FVALUE><![CDATA[Y]]></FVALUE>
+    </FEATURE>
+    </ARTICLE_FEATURES>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID><![CDATA[2]]></SUPPLIER_AID>
+      <ARTICLE_DETAILS xsi:nil="true"/>
+      <ARTICLE_PRICE_DETAILS>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+      <ARTICLE_FEATURES>
+    <FEATURE>
+      <FNAME><![CDATA[A]]></FNAME>
+      <FVALUE><![CDATA[X]]></FVALUE>
+    </FEATURE>
+    <FEATURE>
+      <FNAME><![CDATA[B]]></FNAME>
+      <FVALUE><![CDATA[Y]]></FVALUE>
+    </FEATURE>
+    </ARTICLE_FEATURES>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID><![CDATA[3]]></SUPPLIER_AID>
+      <ARTICLE_DETAILS xsi:nil="true"/>
+      <ARTICLE_PRICE_DETAILS>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+    <ARTICLE_PRICE price_type="gros_list">
+      <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
+      <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+      <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
+    </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+      <ARTICLE_FEATURES>
+    <FEATURE>
+      <FNAME><![CDATA[A]]></FNAME>
+      <FVALUE><![CDATA[X]]></FVALUE>
+    </FEATURE>
+    <FEATURE>
+      <FNAME><![CDATA[B]]></FNAME>
+      <FVALUE><![CDATA[Y]]></FVALUE>
+    </FEATURE>
+    </ARTICLE_FEATURES>
+    </ARTICLE>
+  </T_NEW_CATALOG>
+</BMEcat>
