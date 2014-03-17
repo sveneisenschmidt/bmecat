@@ -57,10 +57,10 @@ class SupplierNodeTest extends \PHPUnit_Framework_TestCase
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\SupplierNode();
-        $this->serializer->setSerializeNull(true);
+        $context = \JMS\Serializer\SerializationContext::create()->setSerializeNull(true);
 
         $expected = file_get_contents(__DIR__.'/../Fixtures/empty_supplier_with_null_values.xml');
-        $actual = $this->serializer->serialize($node, 'xml');
+        $actual = $this->serializer->serialize($node, 'xml', $context);
 
         $this->assertEquals($expected, $actual);
     }
@@ -72,10 +72,10 @@ class SupplierNodeTest extends \PHPUnit_Framework_TestCase
     public function Serialize_Without_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\SupplierNode();
-        $this->serializer->setSerializeNull(false);
+        $context = \JMS\Serializer\SerializationContext::create()->setSerializeNull(false);
 
         $expected = file_get_contents(__DIR__.'/../Fixtures/empty_supplier_without_null_values.xml');
-        $actual = $this->serializer->serialize($node, 'xml');
+        $actual = $this->serializer->serialize($node, 'xml', $context);
 
         $this->assertEquals($expected, $actual);
     }

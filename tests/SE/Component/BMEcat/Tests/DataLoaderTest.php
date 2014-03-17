@@ -329,12 +329,12 @@ class DataLoaderTest extends \PHPUnit_Framework_TestCase
             'nullable' => true
         ];
 
-        $serializer = $this->getMock('\JMS\Serializer\Serializer', [], [], '', false);
-        $serializer->expects($this->exactly(2))
+        $context = $this->getMock('\JMS\Serializer\SerializationContext', [], [], '', false);
+        $context->expects($this->exactly(2))
             ->method('setSerializeNull')
             ->with($data['nullable']);
 
-        $builder = new \SE\Component\BMEcat\DocumentBuilder($serializer);
+        $builder = new \SE\Component\BMEcat\DocumentBuilder(null, null, $context);
         $builder->setSerializeNull($data['nullable']);
 
         \SE\Component\BMEcat\DataLoader::load($data, $builder);

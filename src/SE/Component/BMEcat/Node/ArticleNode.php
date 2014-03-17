@@ -50,10 +50,10 @@ class ArticleNode extends AbstractNode
      *
      * @Serializer\Expose
      * @Serializer\SerializedName("ARTICLE_PRICE_DETAILS")
-     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticlePricingNode>")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticlePriceNode>")
      * @Serializer\XmlList( entry="ARTICLE_PRICE")
      *
-     * @var \SE\Component\BMEcat\Node\ArticlePricingNode[]
+     * @var \SE\Component\BMEcat\Node\ArticlePriceNode[]
      */
     protected $prices = [];
 
@@ -167,7 +167,7 @@ class ArticleNode extends AbstractNode
 
     /**
      *
-     * @return \SE\Component\BMEcat\Node\ArticlePricingNode[]
+     * @return \SE\Component\BMEcat\Node\ArticlePriceNode[]
      */
     public function getPrices()
     {

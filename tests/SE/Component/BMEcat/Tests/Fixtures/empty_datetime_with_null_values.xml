@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DATETIME type="generation_date">
+<DATETIME xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="generation_date">
   <DATE xsi:nil="true"/>
   <TIME xsi:nil="true"/>
   <TIMEZONE xsi:nil="true"/>

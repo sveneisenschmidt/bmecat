@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ARTICLE_PRICE price_type="gros_list">
+<ARTICLE_PRICE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" price_type="gros_list">
   <PRICE_AMOUNT xsi:nil="true"/>
   <SUPPLPRICE_AMOUNT xsi:nil="true"/>
   <PRICE_CURRENCY xsi:nil="true"/>

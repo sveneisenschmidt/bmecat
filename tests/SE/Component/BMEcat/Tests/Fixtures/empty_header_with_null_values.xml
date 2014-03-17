@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<HEADER>
+<HEADER xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <GENERATOR_INFO xsi:nil="true"/>
   <CATALOG xsi:nil="true"/>
   <SUPPLIER xsi:nil="true"/>

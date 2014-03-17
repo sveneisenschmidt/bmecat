@@ -12,6 +12,7 @@ namespace SE\Component\BMEcat;
 
 use \JMS\Serializer\Serializer;
 use \JMS\Serializer\SerializerBuilder;
+use \JMS\Serializer\SerializationContext;
 
 use \SE\Component\BMEcat\DataLoader;
 use \SE\Component\BMEcat\NodeLoader;
@@ -33,6 +34,12 @@ class DocumentBuilder
 
     /**
      *
+     * @var \JMS\Serializer\SerializationContext
+     */
+    protected $context;
+
+    /**
+     *
      * @var \SE\Component\BMEcat\NodeLoader
      */
     protected $loader;
@@ -48,16 +55,22 @@ class DocumentBuilder
      * @param \JMS\Serializer\Serializer $serializer
      * @param \SE\Component\BMEcat\NodeLoader $loader
      */
-    public function __construct(Serializer $serializer = null, NodeLoader $loader = null)
+    public function __construct(Serializer $serializer = null, NodeLoader $loader = null, $context = null)
     {
         if($serializer === null) {
             $serializer = SerializerBuilder::create()->build();
         }
 
+        if($context === null) {
+            $context = SerializationContext::create();
+        }
+
+
         if($loader === null) {
             $loader = new NodeLoader();
         }
 
+        $this->context    = $context;
         $this->serializer = $serializer;
         $this->loader     = $loader;
     }
@@ -89,6 +102,15 @@ class DocumentBuilder
     public function getSerializer()
     {
         return $this->serializer;
+    }
+
+    /**
+     *
+     * @return \JMS\Serializer\SerializationContext
+     */
+    public function getContext()
+    {
+        return $this->context;
     }
 
     /**
@@ -158,6 +180,15 @@ class DocumentBuilder
     {
         DataLoader::load($data, $this);
     }
+
+    /**
+     *
+     * @param $bool
+     */
+    public function setSerializeNull($bool)
+    {
+        $this->context->setSerializeNull($bool);
+    }
     
     /**
      *
@@ -170,6 +201,6 @@ class DocumentBuilder
             throw new MissingDocumentException('No Document built. Please call ::build first.');
         }
 
-        return $this->serializer->serialize($document, 'xml');
+        return $this->serializer->serialize($document, 'xml', $this->context);
     }
 }
