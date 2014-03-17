@@ -158,16 +158,7 @@ class DocumentBuilder
     {
         DataLoader::load($data, $this);
     }
-
-    /**
-     *
-     * @param boolean $serializeNull
-     */
-    public function setSerializeNull($serializeNull)
-    {
-        $this->getSerializer()->setSerializeNull($serializeNull);
-    }
-
+    
     /**
      *
      * @throws \SE\Component\BMEcat\Exception\MissingDocumentException
