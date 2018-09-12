@@ -10,12 +10,8 @@
 
 namespace SE\Component\BMEcat\Node;
 
-use \JMS\Serializer\Annotation as Serializer;
-
-use \SE\Component\BMEcat\Node\AbstractNode;
-use \SE\Component\BMEcat\Node\ArticleDetailsNode;
-use \SE\Component\BMEcat\Node\ArticleFeaturesNode;
-use \SE\Component\BMEcat\Node\ArticlePriceNode;
+use JMS\Serializer\Annotation as Serializer;
+use SE\Component\BMEcat\Node\ArticleFeaturesNode;
 
 /**
  *
@@ -69,6 +65,26 @@ class ArticleNode extends AbstractNode
     protected $features = [];
 
     /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("ARTICLE_ORDER_DETAILS")
+     * @Serializer\Type("\SE\Component\BMEcat\Node\ArticleOrderDetailsNode")
+     *
+     * @var \SE\Component\BMEcat\Node\ArticleOrderDetailsNode
+     */
+    protected $orderDetails;
+
+    /**
+     *
+     * @Serializer\Expose
+     * @Serializer\SerializedName("MIME_INFO")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleMimeNode>")
+     * @Serializer\XmlList( entry="MIME")
+     *
+     * @var \SE\Component\BMEcat\Node\ArticleMimeNode[]
+     */
+    protected $mimes = [];
+
+    /**
      *
      * @param \SE\Component\BMEcat\Node\ArticleDetailsNode $detail
      */
@@ -92,10 +108,10 @@ class ArticleNode extends AbstractNode
      */
     public function addFeature(ArticleFeatureNode $feature)
     {
-        if($this->features === null) {
+        if ($this->features === null) {
             $this->features = [];
         }
-        $this->features []= $feature;
+        $this->features [] = $feature;
     }
 
     /**
@@ -104,10 +120,18 @@ class ArticleNode extends AbstractNode
      */
     public function addPrice(ArticlePriceNode $price)
     {
-        if($this->prices === null) {
+        if ($this->prices === null) {
             $this->prices = [];
         }
-        $this->prices []= $price;
+        $this->prices[] = $price;
+    }
+
+    public function addMime(ArticleMimeNode $mime)
+    {
+        if ($this->mimes === null) {
+            $this->mimes = [];
+        }
+        $this->mimes[] = $mime;
     }
 
     /**
@@ -117,7 +141,7 @@ class ArticleNode extends AbstractNode
      */
     public function nullFeatures()
     {
-        if(empty($this->features) === true) {
+        if (empty($this->features) === true) {
             $this->features = null;
         }
     }
@@ -129,7 +153,7 @@ class ArticleNode extends AbstractNode
      */
     public function nullPrices()
     {
-        if(empty($this->prices) === true) {
+        if (empty($this->prices) === true) {
             $this->prices = null;
         }
     }
@@ -144,6 +168,22 @@ class ArticleNode extends AbstractNode
     }
 
     /**
+     * @param \SE\Component\BMEcat\Node\ArticleDetailsNode $detail
+     */
+    public function setDetail($detail)
+    {
+        $this->detail = $detail;
+    }
+
+    /**
+     * @param \SE\Component\BMEcat\Node\ArticleOrderDetailsNode $orderDetails
+     */
+    public function setOrderDetails($orderDetails)
+    {
+        $this->orderDetails = $orderDetails;
+    }
+
+    /**
      *
      * @return string
      */
@@ -153,12 +193,20 @@ class ArticleNode extends AbstractNode
     }
 
     /**
+     * @return \SE\Component\BMEcat\Node\ArticleDetailsNode
+     */
+    public function getDetail()
+    {
+        return $this->detail;
+    }
+
+    /**
      *
      * @return \SE\Component\BMEcat\Node\ArticleFeatureNode[]
      */
     public function getFeatures()
     {
-        if($this->features === null)  {
+        if ($this->features === null) {
             return [];
         }
 
@@ -171,10 +219,30 @@ class ArticleNode extends AbstractNode
      */
     public function getPrices()
     {
-        if($this->prices === null)  {
+        if ($this->prices === null) {
             return [];
         }
 
         return $this->prices;
+    }
+
+    /**
+     * @return \SE\Component\BMEcat\Node\ArticleOrderDetailsNode
+     */
+    public function getOrderDetails()
+    {
+        return $this->orderDetails;
+    }
+
+    /**
+     * @return \SE\Component\BMEcat\Node\ArticleMimeNode[]
+     */
+    public function getMimes()
+    {
+        if ($this->mimes === null) {
+            return [];
+        }
+
+        return $this->mimes;
     }
 }
