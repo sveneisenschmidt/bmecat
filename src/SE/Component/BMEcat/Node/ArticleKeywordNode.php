@@ -24,7 +24,7 @@ class ArticleKeywordNode extends AbstractNode
     /**
      * @return string
      */
-    public static function getValue(): string
+    public static function getValue()
     {
         return self::$value;
     }
@@ -32,7 +32,7 @@ class ArticleKeywordNode extends AbstractNode
     /**
      * @param string $value
      */
-    public static function setValue(string $value): void
+    public static function setValue($value)
     {
         self::$value = $value;
     }
