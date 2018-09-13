@@ -4,5 +4,7 @@
     <CATALOG>
       <DATETIME type="generation_date"/>
     </CATALOG>
+    <SUPPLIER/>
   </HEADER>
+  <T_NEW_CATALOG/>
 </BMEcat>
