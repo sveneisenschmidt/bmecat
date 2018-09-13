@@ -17,19 +17,6 @@ class SpecialTreatmentClassNodeTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function Set_Get_Type()
-    {
-        $node = new \SE\Component\BMEcat\Node\SpecialTreatmentClassNode();
-        $value = sha1(uniqid(microtime(false), true));
-
-        $this->assertNull($node->getType());
-        $node->setType($value);
-        $this->assertEquals($value, $node->getType());
-    }
-
-    /**
-     * @test
-     */
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\SpecialTreatmentClassNode();

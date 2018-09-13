@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ARTICLE_ORDER_DETAILS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <ORDER_UNIT xsi:nil="true"/>
-    <CONTENT_UNIT xsi:nil="true"/>
-    <NO_CU_PER_OU xsi:nil="true"/>
-    <PRICE_QUANTITY xsi:nil="true"/>
-    <QUANTITY_MIN xsi:nil="true"/>
-    <QUANTITY_INTERVAL xsi:nil="true"/>
+  <ORDER_UNIT xsi:nil="true"/>
+  <CONTENT_UNIT xsi:nil="true"/>
+  <NO_CU_PER_OU><![CDATA[1]]></NO_CU_PER_OU>
+  <PRICE_QUANTITY><![CDATA[1]]></PRICE_QUANTITY>
+  <QUANTITY_MIN><![CDATA[1]]></QUANTITY_MIN>
+  <QUANTITY_INTERVAL><![CDATA[1]]></QUANTITY_INTERVAL>
 </ARTICLE_ORDER_DETAILS>

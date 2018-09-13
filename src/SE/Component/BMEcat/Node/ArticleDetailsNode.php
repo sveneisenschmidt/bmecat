@@ -11,7 +11,6 @@
 namespace SE\Component\BMEcat\Node;
 
 use \JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Tests\Fixtures\Article;
 
 /**
  *
@@ -61,12 +60,12 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("BUYER_AID")
-     * @Serializer\Type("SE\Component\BMEcat\Node\BuyerAidNode")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\BuyerAidNode>")
+     * @Serializer\XmlList(inline=true, entry="BUYER_AID")
      *
      * @var \SE\Component\BMEcat\Node\BuyerAidNode[]
      */
-    protected $buyerAids = [];
+    protected $buyerAids;
 
     /**
      *
@@ -125,22 +124,22 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("SPECIAL_TREATMENT_CLASS")
-     * @Serializer\Type("SE\Component\BMEcat\Node\SpecialTreatmentClassNode")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\SpecialTreatmentClassNode>")
+     * @Serializer\XmlList(inline=true, entry="SPECIAL_TREATMENT_CLASS")
      *
      * @var \SE\Component\BMEcat\Node\SpecialTreatmentClassNode[]
      */
-    protected $specialTreatmentClasses = [];
+    protected $specialTreatmentClasses;
 
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("KEYWORD")
-     * @Serializer\Type("SE\Component\BMEcat\Node\ArticleKeywordNode")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleKeywordNode>")
+     * @Serializer\XmlList(inline=true, entry="KEYWORD")
      *
      * @var \SE\Component\BMEcat\Node\ArticleKeywordNode[]
      */
-    protected $keywords = [];
+    protected $keywords;
 
     /**
      *
@@ -172,12 +171,12 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("ARTICLE_STATUS")
-     * @Serializer\Type("SE\Component\BMEcat\Node\ArticleStatusNode")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleStatusNode>")
+     * @Serializer\XmlList(inline=true, entry="ARTICLE_STATUS")
      *
      * @var \SE\Component\BMEcat\Node\ArticleStatusNode[]
      */
-    protected $articleStatus = [];
+    protected $articleStatus;
 
     /**
      * @param BuyerAidNode $buyerAid
@@ -206,7 +205,10 @@ class ArticleDetailsNode extends AbstractNode
      */
     public function addKeyword(ArticleKeywordNode $keyword)
     {
-        $this->keywords = $keyword;
+        if ($this->keywords === null) {
+            $this->keywords = [];
+        }
+        $this->keywords[] = $keyword;
     }
 
     /**
@@ -425,6 +427,10 @@ class ArticleDetailsNode extends AbstractNode
      */
     public function getBuyerAids()
     {
+        if ($this->buyerAids === null) {
+            return [];
+        }
+
         return $this->buyerAids;
     }
 
@@ -473,6 +479,10 @@ class ArticleDetailsNode extends AbstractNode
      */
     public function getSpecialTreatmentClasses()
     {
+        if ($this->specialTreatmentClasses === null) {
+            return [];
+        }
+
         return $this->specialTreatmentClasses;
     }
 
@@ -481,6 +491,10 @@ class ArticleDetailsNode extends AbstractNode
      */
     public function getKeywords()
     {
+        if ($this->keywords === null) {
+            return [];
+        }
+
         return $this->keywords;
     }
 
@@ -505,6 +519,10 @@ class ArticleDetailsNode extends AbstractNode
      */
     public function getArticleStatus()
     {
+        if ($this->articleStatus === null) {
+            return [];
+        }
+
         return $this->articleStatus;
     }
 }

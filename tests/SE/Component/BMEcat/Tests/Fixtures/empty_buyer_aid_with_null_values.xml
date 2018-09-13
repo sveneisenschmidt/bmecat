@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BUYER_AID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <type xsi:nil="true"/>
-</BUYER_AID>
+<BUYER_AID type=""><![CDATA[]]></BUYER_AID>

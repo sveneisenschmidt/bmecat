@@ -9,31 +9,31 @@ use \JMS\Serializer\Annotation as Serializer;
  * @package SE\Component\BMEcat
  * @author Jochen Pfaeffle <jochen.pfaeffle.dev@gmail.com>
  *
- * @Serializer\XmlRoot("BUYER_AID")
+ * @Serializer\XmlRoot("KEYWORD")
  */
 class ArticleKeywordNode extends AbstractNode
 {
     /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
+     * @Serializer\XmlValue
      *
      * @var string
      */
-    protected $value;
-
-    /**
-     * @param string $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
+    static protected $value = '';
 
     /**
      * @return string
      */
-    public function getValue()
+    public static function getValue(): string
     {
-        return $this->value;
+        return self::$value;
+    }
+
+    /**
+     * @param string $value
+     */
+    public static function setValue(string $value): void
+    {
+        self::$value = $value;
     }
 }

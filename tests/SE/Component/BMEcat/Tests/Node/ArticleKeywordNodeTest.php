@@ -20,9 +20,9 @@ class ArticleKeywordNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_Description_Value()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleKeywordNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = '';
 
-        $this->assertNull($node->getValue());
+        $this->assertEquals('', $node->getValue());
         $node->setValue($value);
         $this->assertEquals($value, $node->getValue());
     }

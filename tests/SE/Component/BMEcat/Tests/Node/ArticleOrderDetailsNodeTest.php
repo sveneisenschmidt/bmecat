@@ -46,9 +46,9 @@ class ArticleOrderDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_No_Cu_Per_Ou()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = rand(10,1000);
 
-        $this->assertNull($node->getNoCuPerOu());
+        $this->assertEquals(1, $node->getNoCuPerOu());
         $node->setNoCuPerOu($value);
         $this->assertEquals($value, $node->getNoCuPerOu());
     }
@@ -59,9 +59,9 @@ class ArticleOrderDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_Price_Quantity()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = rand(10,1000);
 
-        $this->assertNull($node->getPriceQuantity());
+        $this->assertEquals(1, $node->getPriceQuantity());
         $node->setPriceQuantity($value);
         $this->assertEquals($value, $node->getPriceQuantity());
     }
@@ -72,11 +72,24 @@ class ArticleOrderDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_Quantity_Min()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = rand(10,1000);
 
-        $this->assertNull($node->getQuantityMin());
+        $this->assertEquals(1, $node->getQuantityMin());
         $node->setQuantityMin($value);
         $this->assertEquals($value, $node->getQuantityMin());
+    }
+
+    /**
+     * @test
+     */
+    public function Set_Get_Quantity_Interval()
+    {
+        $node = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode();
+        $value = rand(10,1000);
+
+        $this->assertEquals(1, $node->getQuantityInterval());
+        $node->setQuantityInterval($value);
+        $this->assertEquals($value, $node->getQuantityInterval());
     }
 
     /**

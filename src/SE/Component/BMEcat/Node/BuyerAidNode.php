@@ -14,52 +14,34 @@ use \JMS\Serializer\Annotation as Serializer;
 class BuyerAidNode extends AbstractNode
 {
     /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
      * @Serializer\XmlAttribute
      *
      * @var string
      */
-    protected $type;
+    protected $type = '';
 
     /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
+     * @Serializer\XmlValue
      *
      * @var string
      */
-    protected $value;
-
-    /**
-     * @param string $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @param string $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
+    static public $value = '';
 
     /**
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @return string
+     * @param string $type
      */
-    public function getValue()
+    public function setType(string $type): void
     {
-        return $this->value;
+        $this->type = $type;
     }
 }

@@ -67,7 +67,7 @@ class ArticleNode extends AbstractNode
     /**
      * @Serializer\Expose
      * @Serializer\SerializedName("ARTICLE_ORDER_DETAILS")
-     * @Serializer\Type("\SE\Component\BMEcat\Node\ArticleOrderDetailsNode")
+     * @Serializer\Type("SE\Component\BMEcat\Node\ArticleOrderDetailsNode")
      *
      * @var \SE\Component\BMEcat\Node\ArticleOrderDetailsNode
      */
@@ -82,7 +82,7 @@ class ArticleNode extends AbstractNode
      *
      * @var \SE\Component\BMEcat\Node\ArticleMimeNode[]
      */
-    protected $mimes = [];
+    protected $mimes;
 
     /**
      *
@@ -160,6 +160,18 @@ class ArticleNode extends AbstractNode
 
     /**
      *
+     * @Serializer\PreSerialize
+     * @Serializer\PostSerialize
+     */
+    public function nullMime()
+    {
+        if (empty($this->mimes) === true) {
+            $this->mimes = null;
+        }
+    }
+
+    /**
+     *
      * @param string $id
      */
     public function setId($id)
@@ -178,7 +190,7 @@ class ArticleNode extends AbstractNode
     /**
      * @param \SE\Component\BMEcat\Node\ArticleOrderDetailsNode $orderDetails
      */
-    public function setOrderDetails($orderDetails)
+    public function setOrderDetails(ArticleOrderDetailsNode $orderDetails)
     {
         $this->orderDetails = $orderDetails;
     }

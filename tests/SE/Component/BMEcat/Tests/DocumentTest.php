@@ -76,6 +76,14 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
                 $article->addFeature($feature);
             }
 
+            $orderDetails = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode;
+            $orderDetails->setNoCuPerOu(1);
+            $orderDetails->setPriceQuantity(1);
+            $orderDetails->setQuantityMin(1);
+            $orderDetails->setQuantityInterval(1);
+
+            $article->setOrderDetails($orderDetails);
+
             $catalog->addArticle($article);
         }
 

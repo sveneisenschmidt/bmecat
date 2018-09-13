@@ -104,6 +104,9 @@ class ArticleOrderDetailsNode extends AbstractNode
      */
     public function getNoCuPerOu()
     {
+        if ($this->noCuPerOu === null) {
+            return 1;
+        }
         return $this->noCuPerOu;
     }
 
@@ -120,6 +123,9 @@ class ArticleOrderDetailsNode extends AbstractNode
      */
     public function getPriceQuantity()
     {
+        if ($this->priceQuantity === null) {
+            return 1;
+        }
         return $this->priceQuantity;
     }
 
@@ -136,6 +142,9 @@ class ArticleOrderDetailsNode extends AbstractNode
      */
     public function getQuantityMin()
     {
+        if ($this->quantityMin === null) {
+            return 1;
+        }
         return $this->quantityMin;
     }
 
@@ -152,6 +161,9 @@ class ArticleOrderDetailsNode extends AbstractNode
      */
     public function getQuantityInterval()
     {
+        if ($this->quantityInterval === null) {
+            return 1;
+        }
         return $this->quantityInterval;
     }
 

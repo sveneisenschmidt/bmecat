@@ -34,9 +34,9 @@ class ArticleDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Add_Get_Buyer_Aides()
     {
         $buyerAids = [
-            new BuyerAidNode(),
-            new BuyerAidNode(),
-            new BuyerAidNode(),
+            new BuyerAidNode('test'),
+            new BuyerAidNode('test'),
+            new BuyerAidNode('test'),
         ];
 
         $node = new \SE\Component\BMEcat\Node\ArticleDetailsNode();
@@ -91,7 +91,7 @@ class ArticleDetailsNodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([], $node->getKeywords());
 
         foreach($keywords as $keyword) {
-            $node->addSpecialTreatmentClass($keyword);
+            $node->addKeyword($keyword);
         }
 
         $this->assertEquals($keywords, $node->getKeywords());
@@ -114,7 +114,7 @@ class ArticleDetailsNodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([], $node->getArticleStatus());
 
         foreach($articleStatus as $singleArticleStatus) {
-            $node->addSpecialTreatmentClass($singleArticleStatus);
+            $node->addArticleStatus($singleArticleStatus);
         }
 
         $this->assertEquals($articleStatus, $node->getArticleStatus());
@@ -230,7 +230,7 @@ class ArticleDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_Delivery_Time()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleDetailsNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = rand(10,1000);
 
         $this->assertNull($node->getDeliveryTime());
         $node->setDeliveryTime($value);
@@ -256,7 +256,7 @@ class ArticleDetailsNodeTest extends \PHPUnit_Framework_TestCase
     public function Set_Get_Article_Order()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleDetailsNode();
-        $value = sha1(uniqid(microtime(false), true));
+        $value = rand(10,1000);
 
         $this->assertNull($node->getArticleOrder());
         $node->setArticleOrder($value);

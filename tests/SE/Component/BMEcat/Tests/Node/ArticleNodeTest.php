@@ -103,6 +103,44 @@ class ArticleNodeTest  extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Add_Get_Article_Order_Details()
+    {
+        $node = new \SE\Component\BMEcat\Node\ArticleNode();
+        $value = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode();
+
+        $this->assertEmpty($node->getOrderDetails());
+        $node->setOrderDetails($value);
+        $this->assertSame($value, $node->getOrderDetails());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Add_Get_Mime_Info()
+    {
+        $mimes = [
+            new \SE\Component\BMEcat\Node\ArticleMimeNode(),
+            new \SE\Component\BMEcat\Node\ArticleMimeNode(),
+            new \SE\Component\BMEcat\Node\ArticleMimeNode(),
+        ];
+
+        $node = new \SE\Component\BMEcat\Node\ArticleNode();
+        $this->assertEmpty($node->getMimes());
+        $node->nullMime();
+        $this->assertEquals([], $node->getMimes());
+
+        foreach($mimes as $mime) {
+            $node->addMime($mime);
+        }
+
+        $this->assertSame($mimes, $node->getMimes());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleNode();

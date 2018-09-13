@@ -14,22 +14,20 @@ use \JMS\Serializer\Annotation as Serializer;
 class SpecialTreatmentClassNode extends AbstractNode
 {
     /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
      * @Serializer\XmlAttribute
      *
      * @var string
      */
-    protected $type;
+    private $type = '';
 
     /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
+     * @Serializer\XmlValue
      *
      * @var string
      */
-    protected $value;
+    static public $value = '';
 
     /**
      * @param string $type
@@ -40,26 +38,10 @@ class SpecialTreatmentClassNode extends AbstractNode
     }
 
     /**
-     * @param string $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-
-    /**
      * @return string
      */
     public function getType()
     {
         return $this->type;
-    }
-
-    /**
-     * @return string
-     */
-    public function getValue()
-    {
-        return $this->value;
     }
 }
