@@ -27,6 +27,7 @@ class SupplierNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("SUPPLIER_ID")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -36,6 +37,7 @@ class SupplierNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("SUPPLIER_NAME")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

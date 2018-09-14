@@ -37,6 +37,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PRICE_AMOUNT")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var float
      */
@@ -46,6 +47,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("SUPPLPRICE_AMOUNT")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var float
      */
@@ -55,6 +57,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PRICE_CURRENCY")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

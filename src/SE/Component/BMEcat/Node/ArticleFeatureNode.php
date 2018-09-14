@@ -27,10 +27,21 @@ class ArticleFeatureNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("FNAME")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
     protected $name;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("FVALUE")
+     * @Serializer\XmlElement(cdata=false)
+     *
+     * @var string
+     */
+    protected $value;
 
     /**
      * @param mixed $name
@@ -47,15 +58,6 @@ class ArticleFeatureNode extends AbstractNode
     {
         return $this->name;
     }
-
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("FVALUE")
-     *
-     * @var string
-     */
-    protected $value;
 
     /**
      * @param string $value

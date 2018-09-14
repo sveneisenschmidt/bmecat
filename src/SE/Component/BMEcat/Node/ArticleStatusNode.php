@@ -24,6 +24,7 @@ class ArticleStatusNode extends AbstractNode
     /**
      * @Serializer\Type("string")
      * @Serializer\XmlValue
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

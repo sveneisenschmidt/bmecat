@@ -29,6 +29,7 @@ class HeaderNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("GENERATOR_INFO")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -56,6 +57,7 @@ class HeaderNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\CatalogNode")
      * @Serializer\SerializedName("CATALOG")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\CatalogNode
      */
@@ -82,6 +84,7 @@ class HeaderNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\SupplierNode")
      * @Serializer\SerializedName("SUPPLIER")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\SupplierNode
      */

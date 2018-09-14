@@ -17,6 +17,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("ORDER_UNIT")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -26,6 +27,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("CONTENT_UNIT")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -35,6 +37,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("NO_CU_PER_OU")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var float
      */
@@ -44,6 +47,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PRICE_QUANTITY")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var float
      */
@@ -53,6 +57,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("QUANTITY_MIN")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var int
      */
@@ -62,6 +67,7 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("QUANTITY_INTERVAL")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var int
      */
