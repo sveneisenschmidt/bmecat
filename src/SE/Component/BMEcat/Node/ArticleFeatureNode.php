@@ -28,7 +28,6 @@ class ArticleFeatureNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("FNAME")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -39,7 +38,6 @@ class ArticleFeatureNode extends AbstractNode
      * @Serializer\Type("string")
      * @Serializer\SerializedName("VARIANTS")
      * @Serializer\SkipWhenEmpty
-     * @Serializer\XmlElement(cdata=false)
      * @Serializer\Exclude(if="empty($this->value)")
      *
      * @var string
@@ -50,7 +48,6 @@ class ArticleFeatureNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("FVALUE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -59,7 +56,6 @@ class ArticleFeatureNode extends AbstractNode
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("FUNIT")
      *
      * @var string
@@ -69,7 +65,6 @@ class ArticleFeatureNode extends AbstractNode
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("FORDER")
      *
      * @var string
@@ -79,7 +74,6 @@ class ArticleFeatureNode extends AbstractNode
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("FDESCR")
      *
      * @var string
@@ -89,7 +83,6 @@ class ArticleFeatureNode extends AbstractNode
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("FVALUE_DETAILS")
      *
      * @var string

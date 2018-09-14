@@ -17,7 +17,6 @@ class ArticleMimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("MIME_TYPE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -27,7 +26,6 @@ class ArticleMimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("MIME_SOURCE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -37,7 +35,6 @@ class ArticleMimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("MIME_DESCR")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -47,7 +44,6 @@ class ArticleMimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("MIME_ALT")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -57,7 +53,6 @@ class ArticleMimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("MIME_PURPOSE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

@@ -24,8 +24,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("DESCRIPTION_SHORT")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -34,8 +34,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("DESCRIPTION_LONG")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -44,8 +44,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("EAN")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -54,8 +54,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("SUPPLIER_ALT_AID")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -66,17 +66,15 @@ class ArticleDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\BMEcat\Node\BuyerAidNode>")
      * @Serializer\XmlList(inline=true, entry="BUYER_AID")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\BuyerAidNode[]
      */
     protected $buyerAids;
 
     /**
-     *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("MANUFACTURER_AID")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -85,8 +83,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("MANUFACTURER_NAME")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -95,8 +93,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("MANUFACTURER_TYPE_DESCR")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -105,8 +103,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("ERP_GROUP_BUYER")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -115,8 +113,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("ERP_GROUP_SUPPLIER")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -125,6 +123,7 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("float")
      * @Serializer\SerializedName("DELIVERY_TIME")
      * @Serializer\XmlElement(cdata=false)
      *
@@ -137,7 +136,6 @@ class ArticleDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\BMEcat\Node\SpecialTreatmentClassNode>")
      * @Serializer\XmlList(inline=true, entry="SPECIAL_TREATMENT_CLASS")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\SpecialTreatmentClassNode[]
      */
@@ -148,7 +146,6 @@ class ArticleDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleKeywordNode>")
      * @Serializer\XmlList(inline=true, entry="KEYWORD")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleKeywordNode[]
      */
@@ -157,8 +154,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("REMARKS")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -167,8 +164,8 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("SEGMENT")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -177,6 +174,7 @@ class ArticleDetailsNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
+     * @Serializer\Type("int")
      * @Serializer\SerializedName("ARTICLE_ORDER")
      * @Serializer\XmlElement(cdata=false)
      *
@@ -189,7 +187,6 @@ class ArticleDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleStatusNode>")
      * @Serializer\XmlList(inline=true, entry="ARTICLE_STATUS")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleStatusNode[]
      */

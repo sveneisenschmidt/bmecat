@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
   <HEADER>
-    <GENERATOR_INFO>DocumentTest Document</GENERATOR_INFO>
+    <GENERATOR_INFO><![CDATA[DocumentTest Document]]></GENERATOR_INFO>
     <CATALOG>
-      <CATALOG_ID>MY_CATALOG</CATALOG_ID>
-      <CATALOG_VERSION>0.99</CATALOG_VERSION>
-      <LANGUAGE>EN</LANGUAGE>
+      <CATALOG_ID><![CDATA[MY_CATALOG]]></CATALOG_ID>
+      <CATALOG_VERSION><![CDATA[0.99]]></CATALOG_VERSION>
+      <LANGUAGE><![CDATA[EN]]></LANGUAGE>
       <DATETIME type="generation_date">
-        <DATE>1979-01-01</DATE>
-        <TIME>10:59:54</TIME>
-        <TIMEZONE>-01:00</TIMEZONE>
+        <DATE><![CDATA[1979-01-01]]></DATE>
+        <TIME><![CDATA[10:59:54]]></TIME>
+        <TIMEZONE><![CDATA[-01:00]]></TIMEZONE>
       </DATETIME>
     </CATALOG>
     <SUPPLIER>
-      <SUPPLIER_ID>BMECAT_TEST</SUPPLIER_ID>
-      <SUPPLIER_NAME>TestSupplier</SUPPLIER_NAME>
+      <SUPPLIER_ID><![CDATA[BMECAT_TEST]]></SUPPLIER_ID>
+      <SUPPLIER_NAME><![CDATA[TestSupplier]]></SUPPLIER_NAME>
     </SUPPLIER>
   </HEADER>
   <T_NEW_CATALOG>
     <ARTICLE>
-      <SUPPLIER_AID>1</SUPPLIER_AID>
+      <SUPPLIER_AID><![CDATA[1]]></SUPPLIER_AID>
       <ARTICLE_DETAILS xsi:nil="true"/>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>GBP</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
         <FEATURE>
-          <FNAME>A</FNAME>
+          <FNAME><![CDATA[A]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>X</FVALUE>
+          <FVALUE><![CDATA[X]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>
           <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
-          <FNAME>B</FNAME>
+          <FNAME><![CDATA[B]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>Y</FVALUE>
+          <FVALUE><![CDATA[Y]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>
@@ -64,34 +64,34 @@
       <MIME_INFO xsi:nil="true"/>
     </ARTICLE>
     <ARTICLE>
-      <SUPPLIER_AID>2</SUPPLIER_AID>
+      <SUPPLIER_AID><![CDATA[2]]></SUPPLIER_AID>
       <ARTICLE_DETAILS xsi:nil="true"/>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>GBP</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
         <FEATURE>
-          <FNAME>A</FNAME>
+          <FNAME><![CDATA[A]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>X</FVALUE>
+          <FVALUE><![CDATA[X]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>
           <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
-          <FNAME>B</FNAME>
+          <FNAME><![CDATA[B]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>Y</FVALUE>
+          <FVALUE><![CDATA[Y]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>
@@ -109,34 +109,34 @@
       <MIME_INFO xsi:nil="true"/>
     </ARTICLE>
     <ARTICLE>
-      <SUPPLIER_AID>3</SUPPLIER_AID>
+      <SUPPLIER_AID><![CDATA[3]]></SUPPLIER_AID>
       <ARTICLE_DETAILS xsi:nil="true"/>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
           <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
           <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
-          <PRICE_CURRENCY>GBP</PRICE_CURRENCY>
+          <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
         <FEATURE>
-          <FNAME>A</FNAME>
+          <FNAME><![CDATA[A]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>X</FVALUE>
+          <FVALUE><![CDATA[X]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>
           <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
-          <FNAME>B</FNAME>
+          <FNAME><![CDATA[B]]></FNAME>
           <VARIANTS xsi:nil="true"/>
-          <FVALUE>Y</FVALUE>
+          <FVALUE><![CDATA[Y]]></FVALUE>
           <FUNIT xsi:nil="true"/>
           <FORDER xsi:nil="true"/>
           <FDESCR xsi:nil="true"/>

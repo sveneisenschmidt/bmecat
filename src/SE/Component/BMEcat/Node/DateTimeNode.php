@@ -37,7 +37,6 @@ class DateTimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("DATE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \DateTime
      */
@@ -47,7 +46,6 @@ class DateTimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("TIME")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \DateTime
      */
@@ -57,7 +55,6 @@ class DateTimeNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("TIMEZONE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \DateTimeZone
      */

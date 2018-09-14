@@ -22,9 +22,8 @@ class BuyerAidNode extends AbstractNode
     protected $type = '';
 
     /**
-     * @Serializer\Type("string")
      * @Serializer\XmlValue
-     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\Type("string")
      *
      * @var string
      */

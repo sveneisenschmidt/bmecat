@@ -56,7 +56,6 @@ class DocumentNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\HeaderNode")
      * @Serializer\SerializedName("HEADER")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\HeaderNode
      */
@@ -66,7 +65,6 @@ class DocumentNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\NewCatalogNode")
      * @Serializer\SerializedName("T_NEW_CATALOG")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\NewCatalogNode
      */

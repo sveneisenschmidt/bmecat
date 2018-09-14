@@ -29,7 +29,6 @@ class CatalogNode extends AbstractNode
       * @Serializer\Expose
       * @Serializer\Type("string")
       * @Serializer\SerializedName("CATALOG_ID")
-     * @Serializer\XmlElement(cdata=false)
       *
       * @var string
       */
@@ -39,7 +38,6 @@ class CatalogNode extends AbstractNode
       * @Serializer\Expose
       * @Serializer\Type("string")
       * @Serializer\SerializedName("CATALOG_VERSION")
-     * @Serializer\XmlElement(cdata=false)
       *
       * @var string
       */
@@ -49,7 +47,6 @@ class CatalogNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("LANGUAGE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -59,7 +56,6 @@ class CatalogNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("SE\Component\BMEcat\Node\DateTimeNode")
      * @Serializer\SerializedName("DATETIME")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

@@ -25,9 +25,8 @@ class ArticleNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("SUPPLIER_AID")
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\SerializedName("SUPPLIER_AID")
      *
      * @var string
      */
@@ -38,7 +37,6 @@ class ArticleNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ARTICLE_DETAILS")
      * @Serializer\Type("SE\Component\BMEcat\Node\ArticleDetailsNode")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleDetailsNode
      */
@@ -50,7 +48,6 @@ class ArticleNode extends AbstractNode
      * @Serializer\SerializedName("ARTICLE_PRICE_DETAILS")
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticlePriceNode>")
      * @Serializer\XmlList( entry="ARTICLE_PRICE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticlePriceNode[]
      */
@@ -62,7 +59,6 @@ class ArticleNode extends AbstractNode
      * @Serializer\SerializedName("ARTICLE_FEATURES")
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleFeatureNode>")
      * @Serializer\XmlList( entry="FEATURE")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleFeatureNode[]
      */
@@ -72,7 +68,6 @@ class ArticleNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ARTICLE_ORDER_DETAILS")
      * @Serializer\Type("SE\Component\BMEcat\Node\ArticleOrderDetailsNode")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleOrderDetailsNode
      */
@@ -84,7 +79,6 @@ class ArticleNode extends AbstractNode
      * @Serializer\SerializedName("MIME_INFO")
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleMimeNode>")
      * @Serializer\XmlList( entry="MIME")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\BMEcat\Node\ArticleMimeNode[]
      */

@@ -17,7 +17,6 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("ORDER_UNIT")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -27,7 +26,6 @@ class ArticleOrderDetailsNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("CONTENT_UNIT")
-     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
