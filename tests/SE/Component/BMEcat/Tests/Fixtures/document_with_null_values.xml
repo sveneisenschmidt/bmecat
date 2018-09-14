@@ -36,11 +36,21 @@
       <ARTICLE_FEATURES>
         <FEATURE>
           <FNAME>A</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>X</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
           <FNAME>B</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>Y</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
@@ -71,11 +81,21 @@
       <ARTICLE_FEATURES>
         <FEATURE>
           <FNAME>A</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>X</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
           <FNAME>B</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>Y</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
@@ -106,11 +126,21 @@
       <ARTICLE_FEATURES>
         <FEATURE>
           <FNAME>A</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>X</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
         <FEATURE>
           <FNAME>B</FNAME>
+          <VARIANTS xsi:nil="true"/>
           <FVALUE>Y</FVALUE>
+          <FUNIT xsi:nil="true"/>
+          <FORDER xsi:nil="true"/>
+          <FDESCR xsi:nil="true"/>
+          <FVALUE_DETAILS xsi:nil="true"/>
         </FEATURE>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
