@@ -56,11 +56,10 @@ class ArticleNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("ARTICLE_FEATURES")
-     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleFeatureNode>")
-     * @Serializer\XmlList( entry="FEATURE")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleFeaturesNode>")
+     * @Serializer\XmlList( inline=true, entry="ARTICLE_FEATURES")
      *
-     * @var \SE\Component\BMEcat\Node\ArticleFeatureNode[]
+     * @var \SE\Component\BMEcat\Node\ArticleFeaturesNode[]
      */
     protected $features = [];
 
@@ -85,6 +84,18 @@ class ArticleNode extends AbstractNode
     protected $mimes;
 
     /**
+     * Only for PIXI Import
+     *
+     * @Serializer\Expose
+     * @Serializer\SerializedName("ITEMTAGS")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleItemTagNode>")
+     * @Serializer\XmlList( entry="ITEMTAG")
+     *
+     * @var \SE\Component\BMEcat\Node\ArticleItemTagNode[]
+     */
+    protected $itemTags;
+
+    /**
      *
      * @param \SE\Component\BMEcat\Node\ArticleDetailsNode $detail
      */
@@ -104,14 +115,14 @@ class ArticleNode extends AbstractNode
 
     /**
      *
-     * @param \SE\Component\BMEcat\Node\ArticleFeatureNode $feature
+     * @param \SE\Component\BMEcat\Node\ArticleFeaturesNode $features
      */
-    public function addFeature(ArticleFeatureNode $feature)
+    public function addFeatures(ArticleFeaturesNode $features)
     {
         if ($this->features === null) {
             $this->features = [];
         }
-        $this->features [] = $feature;
+        $this->features [] = $features;
     }
 
     /**
@@ -134,6 +145,13 @@ class ArticleNode extends AbstractNode
         $this->mimes[] = $mime;
     }
 
+    public function addItemTag(ArticleItemTagNode $itemTag) {
+        if ($this->itemTags === null) {
+            $this->itemTags = [];
+        }
+        $this->itemTags[] = $itemTag;
+    }
+
     /**
      *
      * @Serializer\PreSerialize
@@ -143,6 +161,18 @@ class ArticleNode extends AbstractNode
     {
         if (empty($this->features) === true) {
             $this->features = null;
+        }
+    }
+
+    /**
+     *
+     * @Serializer\PreSerialize
+     * @Serializer\PostSerialize
+     */
+    public function nullItemTags()
+    {
+        if (empty($this->itemTags) === true) {
+            $this->itemTags = null;
         }
     }
 
@@ -214,7 +244,7 @@ class ArticleNode extends AbstractNode
 
     /**
      *
-     * @return \SE\Component\BMEcat\Node\ArticleFeatureNode[]
+     * @return \SE\Component\BMEcat\Node\ArticleFeaturesNode[]
      */
     public function getFeatures()
     {
@@ -256,5 +286,16 @@ class ArticleNode extends AbstractNode
         }
 
         return $this->mimes;
+    }
+
+    /**
+     * @return \SE\Component\BMEcat\Node\ArticleItemTagNode[]
+     */
+    public function getItemTags()
+    {
+        if ($this->itemTags === null) {
+            return [];
+        }
+        return $this->itemTags;
     }
 }

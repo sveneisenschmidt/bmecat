@@ -58,9 +58,9 @@ class ArticleNodeTest  extends \PHPUnit_Framework_TestCase
     {
 
         $features = [
-            new \SE\Component\BMEcat\Node\ArticleFeatureNode(),
-            new \SE\Component\BMEcat\Node\ArticleFeatureNode(),
-            new \SE\Component\BMEcat\Node\ArticleFeatureNode(),
+            new \SE\Component\BMEcat\Node\ArticleFeaturesNode(),
+            new \SE\Component\BMEcat\Node\ArticleFeaturesNode(),
+            new \SE\Component\BMEcat\Node\ArticleFeaturesNode(),
         ];
 
         $node = new \SE\Component\BMEcat\Node\ArticleNode();
@@ -68,8 +68,8 @@ class ArticleNodeTest  extends \PHPUnit_Framework_TestCase
         $node->nullFeatures();
         $this->assertEquals([], $node->getFeatures());
 
-        foreach($features as $feature) {
-            $node->addFeature($feature);
+        foreach($features as $featureBlock) {
+            $node->addFeatures($featureBlock);
         }
 
         $this->assertSame($features, $node->getFeatures());
@@ -135,6 +135,30 @@ class ArticleNodeTest  extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($mimes, $node->getMimes());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Add_Get_Item_Tags()
+    {
+        $itemTags = [
+            new \SE\Component\BMEcat\Node\ArticleItemTagNode(),
+            new \SE\Component\BMEcat\Node\ArticleItemTagNode(),
+            new \SE\Component\BMEcat\Node\ArticleItemTagNode(),
+        ];
+
+        $node = new \SE\Component\BMEcat\Node\ArticleNode();
+        $this->assertEmpty($node->getItemTags());
+        $node->nullItemTags();
+        $this->assertEquals([], $node->getItemTags());
+
+        foreach($itemTags as $itemTag) {
+            $node->addItemTag($itemTag);
+        }
+
+        $this->assertSame($itemTags, $node->getItemTags());
     }
 
     /**

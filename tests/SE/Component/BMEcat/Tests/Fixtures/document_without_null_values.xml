@@ -33,14 +33,22 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <NO_CU_PER_OU>1</NO_CU_PER_OU>
@@ -64,14 +72,22 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <NO_CU_PER_OU>1</NO_CU_PER_OU>
@@ -95,14 +111,22 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <NO_CU_PER_OU>1</NO_CU_PER_OU>

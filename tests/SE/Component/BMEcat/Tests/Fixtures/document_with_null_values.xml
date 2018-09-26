@@ -34,24 +34,24 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[X]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <ORDER_UNIT xsi:nil="true"/>
@@ -62,6 +62,7 @@
         <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
       </ARTICLE_ORDER_DETAILS>
       <MIME_INFO xsi:nil="true"/>
+      <ITEMTAGS xsi:nil="true"/>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[2]]></SUPPLIER_AID>
@@ -79,24 +80,24 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[X]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <ORDER_UNIT xsi:nil="true"/>
@@ -107,6 +108,7 @@
         <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
       </ARTICLE_ORDER_DETAILS>
       <MIME_INFO xsi:nil="true"/>
+      <ITEMTAGS xsi:nil="true"/>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[3]]></SUPPLIER_AID>
@@ -124,24 +126,24 @@
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[X]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <VARIANTS xsi:nil="true"/>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-          <FUNIT xsi:nil="true"/>
-          <FORDER xsi:nil="true"/>
-          <FDESCR xsi:nil="true"/>
-          <FVALUE_DETAILS xsi:nil="true"/>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <FEATURE xsi:nil="true"/>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
       </ARTICLE_FEATURES>
       <ARTICLE_ORDER_DETAILS>
         <ORDER_UNIT xsi:nil="true"/>
@@ -152,6 +154,7 @@
         <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
       </ARTICLE_ORDER_DETAILS>
       <MIME_INFO xsi:nil="true"/>
+      <ITEMTAGS xsi:nil="true"/>
     </ARTICLE>
   </T_NEW_CATALOG>
 </BMECAT>

@@ -65,15 +65,22 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
                 $article->addPrice($price);
             }
 
-            foreach([['A', 'X'],['B', 'Y']] as $value) {
-                list($key, $text) = $value;
+            foreach([['A', 'B', 'C', 1, 2, 'D', 'E'],['F', 'G', 'H', 3, 4, 'I', 'J']] as $value) {
+                list($systemName, $groupName, $groupId, $serialNumber, $tarifNumber, $countryOfOrigin, $tariftext) = $value;
 
-                $feature = new \SE\Component\BMEcat\Node\ArticleFeatureNode;
+                $features = new \SE\Component\BMEcat\Node\ArticleFeaturesNode;
 
-                $feature->setName($key);
-                $feature->setValue($text);
+                $features->setReferenceFeatureSystemName($systemName);
+                $features->setReferenceFeatureGroupName($groupName);
+                $features->setReferenceFeatureGroupId($groupId);
 
-                $article->addFeature($feature);
+                // Only for PIXI Import
+                $features->setSerialNumberRequired($serialNumber);
+                $features->setCustomsTariffNumber($tarifNumber);
+                $features->setCustomsCountryOfOrigin($countryOfOrigin);
+                $features->setCustomsTariffText($tariftext);
+
+                $article->addFeatures($features);
             }
 
             $orderDetails = new \SE\Component\BMEcat\Node\ArticleOrderDetailsNode;
