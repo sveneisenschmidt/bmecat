@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ARTICLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ARTICLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true">
   <SUPPLIER_AID xsi:nil="true"/>
   <ARTICLE_DETAILS xsi:nil="true"/>
   <ARTICLE_PRICE_DETAILS xsi:nil="true"/>
-  <ARTICLE_FEATURES xsi:nil="true"/>
+  <ARTICLE_ORDER_DETAILS xsi:nil="true"/>
+  <MIME_INFO xsi:nil="true"/>
+  <ITEMTAGS xsi:nil="true"/>
 </ARTICLE>

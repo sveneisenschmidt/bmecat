@@ -25,6 +25,8 @@ class NewCatalogNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\BMEcat\Node\ArticleNode>")
      * @Serializer\XmlList(inline = true, entry = "ARTICLE")
+     *
+     * @var \SE\Component\BMEcat\Node\ArticleNode[]
      */
     protected $articles = [];
 

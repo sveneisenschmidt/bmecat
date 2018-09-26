@@ -35,6 +35,24 @@ class HeaderNode extends AbstractNode
     protected $generatorInfo;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("SE\Component\BMEcat\Node\CatalogNode")
+     * @Serializer\SerializedName("CATALOG")
+     *
+     * @var \SE\Component\BMEcat\Node\CatalogNode
+     */
+    protected $catalog;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("SE\Component\BMEcat\Node\SupplierNode")
+     * @Serializer\SerializedName("SUPPLIER")
+     *
+     * @var \SE\Component\BMEcat\Node\SupplierNode
+     */
+    protected $supplier;
+
+    /**
      * @param string $generatorInfo
      * @return void
      */
@@ -53,15 +71,6 @@ class HeaderNode extends AbstractNode
     }
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("SE\Component\BMEcat\Node\CatalogNode")
-     * @Serializer\SerializedName("CATALOG")
-     *
-     * @var \SE\Component\BMEcat\Node\CatalogNode
-     */
-    protected $catalog;
-
-    /**
      * @param \SE\Component\BMEcat\Node\CatalogNode $catalog
      * @return void
      */
@@ -77,15 +86,6 @@ class HeaderNode extends AbstractNode
     {
         return $this->catalog;
     }
-
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("SE\Component\BMEcat\Node\SupplierNode")
-     * @Serializer\SerializedName("SUPPLIER")
-     *
-     * @var \SE\Component\BMEcat\Node\SupplierNode
-     */
-    protected $supplier;
 
     /**
      * @param \SE\Component\BMEcat\Node\SupplierNode $supplier

@@ -4,4 +4,7 @@
   <CATALOG_VERSION xsi:nil="true"/>
   <LANGUAGE xsi:nil="true"/>
   <DATETIME xsi:nil="true"/>
+  <EXPORT_DATE xsi:nil="true"/>
+  <DATABASE xsi:nil="true"/>
+  <SHOPID xsi:nil="true"/>
 </CATALOG>

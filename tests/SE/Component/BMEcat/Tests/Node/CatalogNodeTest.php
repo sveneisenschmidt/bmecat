@@ -82,6 +82,48 @@ class CatalogNodeTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Set_Get_Export_Date()
+    {
+        $node = new \SE\Component\BMEcat\Node\CatalogNode();
+        $exportDate = date('Y-m-d H:i:s', strtotime('NOW'));
+
+        $this->assertNull($node->getExportDate());
+        $node->setExportDate($exportDate);
+        $this->assertEquals($exportDate, $node->getExportDate());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Set_Get_Database()
+    {
+        $node = new \SE\Component\BMEcat\Node\CatalogNode();
+        $value = sha1(uniqid(microtime(false), true));
+
+        $this->assertNull($node->getDatabase());
+        $node->setDatabase($value);
+        $this->assertEquals($value, $node->getDatabase());
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function Set_Get_Shop_Id()
+    {
+        $node = new \SE\Component\BMEcat\Node\CatalogNode();
+        $value = sha1(uniqid(microtime(false), true));
+
+        $this->assertNull($node->getShopId());
+        $node->setShopId($value);
+        $this->assertEquals($value, $node->getShopId());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\CatalogNode();

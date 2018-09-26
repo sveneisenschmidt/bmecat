@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FEATURE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <FNAME xsi:nil="true"/>
+  <VARIANTS xsi:nil="true"/>
   <FVALUE xsi:nil="true"/>
+  <FUNIT xsi:nil="true"/>
+  <FORDER xsi:nil="true"/>
+  <FDESCR xsi:nil="true"/>
+  <FVALUE_DETAILS xsi:nil="true"/>
 </FEATURE>

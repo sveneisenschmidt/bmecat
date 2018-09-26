@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BMEcat xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
+<BMECAT xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/1999/xhtml.xsd">
   <HEADER>
     <GENERATOR_INFO><![CDATA[DocumentTest Document]]></GENERATOR_INFO>
     <CATALOG>
@@ -22,76 +22,118 @@
       <SUPPLIER_AID><![CDATA[1]]></SUPPLIER_AID>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
       </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_ORDER_DETAILS>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+        <PRICE_QUANTITY>1</PRICE_QUANTITY>
+        <QUANTITY_MIN>1</QUANTITY_MIN>
+        <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
+      </ARTICLE_ORDER_DETAILS>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[2]]></SUPPLIER_AID>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
       </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_ORDER_DETAILS>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+        <PRICE_QUANTITY>1</PRICE_QUANTITY>
+        <QUANTITY_MIN>1</QUANTITY_MIN>
+        <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
+      </ARTICLE_ORDER_DETAILS>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[3]]></SUPPLIER_AID>
       <ARTICLE_PRICE_DETAILS>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[10.5]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[5.25]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>10.5</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>5.25</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[EUR]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
         <ARTICLE_PRICE price_type="gros_list">
-          <PRICE_AMOUNT><![CDATA[7.3]]></PRICE_AMOUNT>
-          <SUPPLPRICE_AMOUNT><![CDATA[3.65]]></SUPPLPRICE_AMOUNT>
+          <PRICE_AMOUNT>7.3</PRICE_AMOUNT>
+          <SUPPLPRICE_AMOUNT>3.65</SUPPLPRICE_AMOUNT>
           <PRICE_CURRENCY><![CDATA[GBP]]></PRICE_CURRENCY>
         </ARTICLE_PRICE>
       </ARTICLE_PRICE_DETAILS>
       <ARTICLE_FEATURES>
-        <FEATURE>
-          <FNAME><![CDATA[A]]></FNAME>
-          <FVALUE><![CDATA[X]]></FVALUE>
-        </FEATURE>
-        <FEATURE>
-          <FNAME><![CDATA[B]]></FNAME>
-          <FVALUE><![CDATA[Y]]></FVALUE>
-        </FEATURE>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[A]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[B]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[C]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>1</SerialNumberRequired>
+        <CustomsTariffNumber>2</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[D]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[E]]></CustomsTariffText>
       </ARTICLE_FEATURES>
+      <ARTICLE_FEATURES>
+        <REFERENCE_FEATURE_SYSTEM_NAME><![CDATA[F]]></REFERENCE_FEATURE_SYSTEM_NAME>
+        <REFERENCE_FEATURE_GROUP_NAME><![CDATA[G]]></REFERENCE_FEATURE_GROUP_NAME>
+        <REFERENCE_FEATURE_GROUP_ID><![CDATA[H]]></REFERENCE_FEATURE_GROUP_ID>
+        <SerialNumberRequired>3</SerialNumberRequired>
+        <CustomsTariffNumber>4</CustomsTariffNumber>
+        <CustomsCountryOfOrigin><![CDATA[I]]></CustomsCountryOfOrigin>
+        <CustomsTariffText><![CDATA[J]]></CustomsTariffText>
+      </ARTICLE_FEATURES>
+      <ARTICLE_ORDER_DETAILS>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+        <PRICE_QUANTITY>1</PRICE_QUANTITY>
+        <QUANTITY_MIN>1</QUANTITY_MIN>
+        <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
+      </ARTICLE_ORDER_DETAILS>
     </ARTICLE>
   </T_NEW_CATALOG>
-</BMEcat>
+</BMECAT>

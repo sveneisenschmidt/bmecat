@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ARTICLE_DETAILS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ARTICLE_DETAILS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true">
   <DESCRIPTION_SHORT xsi:nil="true"/>
   <DESCRIPTION_LONG xsi:nil="true"/>
   <EAN xsi:nil="true"/>
+  <SUPPLIER_ALT_AID xsi:nil="true"/>
+  <MANUFACTURER_AID xsi:nil="true"/>
   <MANUFACTURER_NAME xsi:nil="true"/>
+  <MANUFACTURER_TYPE_DESCR xsi:nil="true"/>
+  <ERP_GROUP_BUYER xsi:nil="true"/>
+  <ERP_GROUP_SUPPLIER xsi:nil="true"/>
+  <DELIVERY_TIME xsi:nil="true"/>
+  <REMARKS xsi:nil="true"/>
   <SEGMENT xsi:nil="true"/>
+  <ARTICLE_ORDER xsi:nil="true"/>
+  <WEIGHT xsi:nil="true"/>
 </ARTICLE_DETAILS>

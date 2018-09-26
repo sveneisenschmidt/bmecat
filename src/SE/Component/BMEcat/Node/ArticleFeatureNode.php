@@ -10,6 +10,7 @@
 
 namespace SE\Component\BMEcat\Node;
 
+use http\Exception\BadQueryStringException;
 use \JMS\Serializer\Annotation as Serializer;
 
 use \SE\Component\BMEcat\Node\AbstractNode;
@@ -33,20 +34,15 @@ class ArticleFeatureNode extends AbstractNode
     protected $name;
 
     /**
-     * @param mixed $name
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("VARIANTS")
+     * @Serializer\SkipWhenEmpty
+     * @Serializer\Exclude(if="empty($this->value)")
+     *
+     * @var string
      */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
+    protected $variants;
 
     /**
      * @Serializer\Expose
@@ -58,6 +54,58 @@ class ArticleFeatureNode extends AbstractNode
     protected $value;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("FUNIT")
+     *
+     * @var string
+     */
+    protected $unit;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("FORDER")
+     *
+     * @var string
+     */
+    protected $order;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("FDESCR")
+     *
+     * @var string
+     */
+    protected $description;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("FVALUE_DETAILS")
+     *
+     * @var string
+     */
+    protected $valueDetails;
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param string $variants
+     */
+    public function setVariants($variants)
+    {
+        $this->variants = $variants;
+    }
+
+    /**
      * @param string $value
      */
     public function setValue($value)
@@ -66,10 +114,90 @@ class ArticleFeatureNode extends AbstractNode
     }
 
     /**
+     * @param string $unit
+     */
+    public function setUnit($unit)
+    {
+        $this->unit = $unit;
+    }
+
+    /**
+     * @param string $order
+     */
+    public function setOrder($order)
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @param string $valueDetails
+     */
+    public function setValueDetails($valueDetails)
+    {
+        $this->valueDetails = $valueDetails;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVariants()
+    {
+        return $this->variants;
+    }
+
+    /**
      * @return string
      */
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnit()
+    {
+        return $this->unit;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValueDetails()
+    {
+        return $this->valueDetails;
     }
 }

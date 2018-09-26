@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ARTICLE_ORDER_DETAILS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ORDER_UNIT xsi:nil="true"/>
+  <CONTENT_UNIT xsi:nil="true"/>
+  <NO_CU_PER_OU>1</NO_CU_PER_OU>
+  <PRICE_QUANTITY>1</PRICE_QUANTITY>
+  <QUANTITY_MIN>1</QUANTITY_MIN>
+  <QUANTITY_INTERVAL>1</QUANTITY_INTERVAL>
+</ARTICLE_ORDER_DETAILS>

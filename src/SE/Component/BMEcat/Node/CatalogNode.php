@@ -62,6 +62,39 @@ class CatalogNode extends AbstractNode
     protected $dateTime;
 
     /**
+     * Only for Pixi Imports
+     *
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("EXPORT_DATE")
+     *
+     * @var string
+     */
+    protected $exportDate;
+
+    /**
+     * Only for Pixi Imports
+     *
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("DATABASE")
+     *
+     * @var string
+     */
+    protected $database;
+
+    /**
+     * Only for Pixi Imports
+     *
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("SHOPID")
+     *
+     * @var string
+     */
+    protected $shopId;
+
+    /**
      * @param string $language
      * @return void
      */
@@ -133,4 +166,51 @@ class CatalogNode extends AbstractNode
         return $this->dateTime;
     }
 
+    /**
+     * @return string
+     */
+    public function getExportDate()
+    {
+        return $this->exportDate;
+    }
+
+    /**
+     * @param string $exportDate
+     */
+    public function setExportDate($exportDate)
+    {
+        $this->exportDate = $exportDate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDatabase()
+    {
+        return $this->database;
+    }
+
+    /**
+     * @param string $database
+     */
+    public function setDatabase($database)
+    {
+        $this->database = $database;
+    }
+
+    /**
+     * @return string
+     */
+    public function getShopId()
+    {
+        return $this->shopId;
+    }
+
+    /**
+     * @param string $shopId
+     */
+    public function setShopId($shopId)
+    {
+        $this->shopId = $shopId;
+    }
 }
