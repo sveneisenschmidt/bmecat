@@ -196,12 +196,12 @@ class ArticleDetailsNode extends AbstractNode
      * Only For PIXI Imports
      *
      * @Serializer\Expose
-     * @Serializer\Type("int")
+     * @Serializer\Type("float")
      * @Serializer\SerializedName("WEIGHT")
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\SkipWhenEmpty
      *
-     * @var int
+     * @var float
      */
     protected $weight;
 
@@ -554,7 +554,7 @@ class ArticleDetailsNode extends AbstractNode
     }
 
     /**
-     * @return int
+     * @return float
      */
     public function getWeight()
     {
@@ -562,7 +562,7 @@ class ArticleDetailsNode extends AbstractNode
     }
 
     /**
-     * @param int $weight
+     * @param float $weight
      */
     public function setWeight($weight)
     {
