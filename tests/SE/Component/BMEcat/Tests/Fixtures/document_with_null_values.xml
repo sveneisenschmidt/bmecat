@@ -11,6 +11,9 @@
         <TIME><![CDATA[10:59:54]]></TIME>
         <TIMEZONE><![CDATA[-01:00]]></TIMEZONE>
       </DATETIME>
+      <EXPORT_DATE xsi:nil="true"/>
+      <DATABASE xsi:nil="true"/>
+      <SHOPID xsi:nil="true"/>
     </CATALOG>
     <SUPPLIER>
       <SUPPLIER_ID><![CDATA[BMECAT_TEST]]></SUPPLIER_ID>

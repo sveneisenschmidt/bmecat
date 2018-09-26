@@ -11,6 +11,9 @@
         <TIME xsi:nil="true"/>
         <TIMEZONE xsi:nil="true"/>
       </DATETIME>
+      <EXPORT_DATE xsi:nil="true"/>
+      <DATABASE xsi:nil="true"/>
+      <SHOPID xsi:nil="true"/>
     </CATALOG>
     <SUPPLIER>
       <SUPPLIER_ID xsi:nil="true"/>
