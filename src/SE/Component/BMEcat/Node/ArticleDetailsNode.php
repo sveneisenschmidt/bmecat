@@ -193,6 +193,19 @@ class ArticleDetailsNode extends AbstractNode
     protected $articleStatus;
 
     /**
+     * Only For PIXI Imports
+     *
+     * @Serializer\Expose
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("WEIGHT")
+     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\SkipWhenEmpty
+     *
+     * @var int
+     */
+    protected $weight;
+
+    /**
      * @param BuyerAidNode $buyerAid
      */
     public function addBuyerAid(BuyerAidNode $buyerAid)
@@ -538,5 +551,21 @@ class ArticleDetailsNode extends AbstractNode
         }
 
         return $this->articleStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param int $weight
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
     }
 }
