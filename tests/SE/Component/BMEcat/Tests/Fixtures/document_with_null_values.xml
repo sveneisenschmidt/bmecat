@@ -43,6 +43,18 @@
           <FVALUE><![CDATA[Y]]></FVALUE>
         </FEATURE>
       </ARTICLE_FEATURES>
+      <MIME_INFO>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/jpeg]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://a.b/c/d.jpg]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[normal]]></MIME_PURPOSE>
+        </MIME>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/bmp]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://w.x/y/z.bmp]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[thumbnail]]></MIME_PURPOSE>
+        </MIME>
+      </MIME_INFO>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[2]]></SUPPLIER_AID>
@@ -69,6 +81,18 @@
           <FVALUE><![CDATA[Y]]></FVALUE>
         </FEATURE>
       </ARTICLE_FEATURES>
+      <MIME_INFO>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/jpeg]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://a.b/c/d.jpg]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[normal]]></MIME_PURPOSE>
+        </MIME>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/bmp]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://w.x/y/z.bmp]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[thumbnail]]></MIME_PURPOSE>
+        </MIME>
+      </MIME_INFO>
     </ARTICLE>
     <ARTICLE>
       <SUPPLIER_AID><![CDATA[3]]></SUPPLIER_AID>
@@ -95,6 +119,18 @@
           <FVALUE><![CDATA[Y]]></FVALUE>
         </FEATURE>
       </ARTICLE_FEATURES>
+      <MIME_INFO>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/jpeg]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://a.b/c/d.jpg]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[normal]]></MIME_PURPOSE>
+        </MIME>
+        <MIME>
+          <MIME_TYPE><![CDATA[image/bmp]]></MIME_TYPE>
+          <MIME_SOURCE><![CDATA[http://w.x/y/z.bmp]]></MIME_SOURCE>
+          <MIME_PURPOSE><![CDATA[thumbnail]]></MIME_PURPOSE>
+        </MIME>
+      </MIME_INFO>
     </ARTICLE>
   </T_NEW_CATALOG>
 </BMEcat>
