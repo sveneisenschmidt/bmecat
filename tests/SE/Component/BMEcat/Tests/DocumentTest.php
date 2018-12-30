@@ -76,6 +76,22 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
                 $article->addFeature($feature);
             }
 
+            foreach([
+                ['image/jpeg', 'http://a.b/c/d.jpg', 'normal'],
+                ['image/bmp', 'http://w.x/y/z.bmp', 'thumbnail']
+                    ] as $value) {
+
+                list($type, $source, $purpose) = $value;
+
+                $mime = new \SE\Component\BMEcat\Node\MimeNode();
+
+                $mime->setType($type);
+                $mime->setSource($source);
+                $mime->setPurpose($purpose);
+
+                $article->addMime($mime);
+            }
+
             $catalog->addArticle($article);
         }
 

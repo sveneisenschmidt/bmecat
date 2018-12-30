@@ -69,6 +69,16 @@ class ArticleNode extends AbstractNode
     protected $features = [];
 
     /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("MIME_INFO")
+     * @Serializer\Type("array<SE\Component\BMEcat\Node\MimeNode>")
+     * @Serializer\XmlList( entry="MIME")
+     *
+     * @var \SE\Component\BMEcat\Node\MimeNode[]
+     */
+    protected $mimeInfo = [];
+
+    /**
      *
      * @param \SE\Component\BMEcat\Node\ArticleDetailsNode $detail
      */
@@ -97,7 +107,6 @@ class ArticleNode extends AbstractNode
         }
         $this->features []= $feature;
     }
-
     /**
      *
      * @param \SE\Component\BMEcat\Node\ArticlePriceNode $price
@@ -108,6 +117,19 @@ class ArticleNode extends AbstractNode
             $this->prices = [];
         }
         $this->prices []= $price;
+    }
+
+
+    /**
+     *
+     * @param \SE\Component\BMEcat\Node\MimeNode $mime
+     */
+    public function addMime(MimeNode $mime)
+    {
+        if($this->mimeInfo === null) {
+            $this->mimeInfo = [];
+        }
+        $this->mimeInfo []= $mime;
     }
 
     /**
@@ -131,6 +153,17 @@ class ArticleNode extends AbstractNode
     {
         if(empty($this->prices) === true) {
             $this->prices = null;
+        }
+    }
+
+    /**
+     * @Serializer\PreSerialize
+     * @Serializer\PostSerialize
+     */
+    public function nullMimeInfo()
+    {
+        if(empty($this->mimeInfo) === true) {
+            $this->mimeInfo = null;
         }
     }
 
@@ -176,5 +209,18 @@ class ArticleNode extends AbstractNode
         }
 
         return $this->prices;
+    }
+
+    /**
+     *
+     * @return \SE\Component\BMEcat\Node\MimeNode[]
+     */
+    public function getMimeInfo()
+    {
+        if($this->mimeInfo === null) {
+            return [];
+        }
+
+        return $this->mimeInfo;
     }
 }

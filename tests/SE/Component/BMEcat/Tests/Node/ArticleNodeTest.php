@@ -103,6 +103,30 @@ class ArticleNodeTest  extends \PHPUnit_Framework_TestCase
      *
      * @test
      */
+    public function Add_Get_MimeInfo()
+    {
+        $mimeInfo = [
+            new \SE\Component\BMEcat\Node\MimeNode(),
+            new \SE\Component\BMEcat\Node\MimeNode(),
+            new \SE\Component\BMEcat\Node\MimeNode()
+        ];
+
+        $node = new \SE\Component\BMEcat\Node\ArticleNode();
+        $this->assertEmpty($node->getMimeInfo());
+        $node->nullMimeInfo();
+        $this->assertEquals([], $node->getMimeInfo());
+
+        foreach($mimeInfo as $mime) {
+            $node->addMime($mime);
+        }
+
+        $this->assertSame($mimeInfo, $node->getMimeInfo());
+    }
+
+    /**
+     *
+     * @test
+     */
     public function Serialize_With_Null_Values()
     {
         $node = new \SE\Component\BMEcat\Node\ArticleNode();
