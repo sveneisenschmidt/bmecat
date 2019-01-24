@@ -10,10 +10,10 @@
 
 namespace SE\Component\BMEcat\Node;
 
-use \JMS\Serializer\Annotation as Serializer;
-use \JMS\Serializer\XmlSerializationVisitor;
+use JMS\Serializer\Annotation as Serializer;
+use JMS\Serializer\XmlSerializationVisitor;
 
-use \SE\Component\BMEcat\Node\NodeInterface;
+use SE\Component\BMEcat\Node\NodeInterface;
 
 /**
  *
