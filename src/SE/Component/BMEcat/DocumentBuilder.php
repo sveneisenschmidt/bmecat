@@ -10,14 +10,14 @@
 
 namespace SE\Component\BMEcat;
 
-use \JMS\Serializer\Serializer;
-use \JMS\Serializer\SerializerBuilder;
-use \JMS\Serializer\SerializationContext;
+use JMS\Serializer\Serializer;
+use JMS\Serializer\SerializerBuilder;
+use JMS\Serializer\SerializationContext;
 
-use \SE\Component\BMEcat\DataLoader;
-use \SE\Component\BMEcat\NodeLoader;
-use \SE\Component\BMEcat\Node\DocumentNode;
-use \SE\Component\BMEcat\Exception\MissingDocumentException;
+use SE\Component\BMEcat\DataLoader;
+use SE\Component\BMEcat\NodeLoader;
+use SE\Component\BMEcat\Node\DocumentNode;
+use SE\Component\BMEcat\Exception\MissingDocumentException;
 
 /**
  *

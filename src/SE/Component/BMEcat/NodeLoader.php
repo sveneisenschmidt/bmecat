@@ -10,8 +10,8 @@
 
 namespace SE\Component\BMEcat;
 
-use \SE\Component\BMEcat\Exception\UnknownNodeException;
-use \SE\Component\BMEcat\Exception\UnknownNodeTypeException;
+use SE\Component\BMEcat\Exception\UnknownNodeException;
+use SE\Component\BMEcat\Exception\UnknownNodeTypeException;
 
 /**
  *

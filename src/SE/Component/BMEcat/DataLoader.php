@@ -10,13 +10,13 @@
 
 namespace SE\Component\BMEcat;
 
-use \SE\Component\BMEcat\DocumentBuilder;
-use \SE\Component\BMEcat\Node\AbstractNode;
-use \SE\Component\BMEcat\Node\DocumentNode;
-use \SE\Component\BMEcat\Node\HeaderNode;
-use \SE\Component\BMEcat\Node\CatalogNode;
-use \SE\Component\BMEcat\Node\DateTimeNode;
-use \SE\Component\BMEcat\Exception\UnknownKeyException;
+use SE\Component\BMEcat\DocumentBuilder;
+use SE\Component\BMEcat\Node\AbstractNode;
+use SE\Component\BMEcat\Node\DocumentNode;
+use SE\Component\BMEcat\Node\HeaderNode;
+use SE\Component\BMEcat\Node\CatalogNode;
+use SE\Component\BMEcat\Node\DateTimeNode;
+use SE\Component\BMEcat\Exception\UnknownKeyException;
 
 /**
  *

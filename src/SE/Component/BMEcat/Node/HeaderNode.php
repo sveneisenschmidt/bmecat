@@ -10,11 +10,11 @@
 
 namespace SE\Component\BMEcat\Node;
 
-use \JMS\Serializer\Annotation as Serializer;
+use JMS\Serializer\Annotation as Serializer;
 
-use \SE\Component\BMEcat\Node\AbstractNode;
-use \SE\Component\BMEcat\Node\CatalogNode;
-use \SE\Component\BMEcat\Node\SupplierNode;
+use SE\Component\BMEcat\Node\AbstractNode;
+use SE\Component\BMEcat\Node\CatalogNode;
+use SE\Component\BMEcat\Node\SupplierNode;
 
 /**
  *
